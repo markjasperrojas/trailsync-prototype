@@ -3,21 +3,21 @@ import { Button, Card, StatusBadge } from '../../components/index.js'
 const trails = [
   {
     name: 'Alto Peak',
-    location: 'Benguet',
+    location: 'Brgy. Cabintan',
     level: 'Moderate',
     tone: 'warning',
     className: 'trail-card--pulag',
   },
   {
     name: 'Sulfatara',
-    location: 'Itogon, Benguet',
+    location: 'Brgy. Cabintan',
     level: 'Beginner friendly',
     tone: 'success',
     className: 'trail-card--ulap',
   },
   {
     name: 'Mount Janagdan',
-    location: 'Zambales',
+    location: 'Brgy. Cabintan',
     level: 'Moderate',
     tone: 'warning',
     className: 'trail-card--pinatubo',

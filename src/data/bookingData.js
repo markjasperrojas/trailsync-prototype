@@ -4,7 +4,7 @@ export const trails = [
   {
     id: 'pulag',
     name: 'Alto Peak',
-    location: 'Kabayan, Benguet',
+    location: 'Brgy. Cabintan',
     duration: '2 days · 1 night',
     difficulty: 'Moderate',
     price: 2850,
@@ -13,7 +13,7 @@ export const trails = [
   {
     id: 'ulap',
     name: 'Sulfatara',
-    location: 'Itogon, Benguet',
+    location: 'Brgy. Cabintan',
     duration: 'Day hike · 6–7 hours',
     difficulty: 'Beginner friendly',
     price: 1450,
@@ -22,7 +22,7 @@ export const trails = [
   {
     id: 'pinatubo',
     name: 'Mount Janagdan',
-    location: 'Botolan, Zambales',
+    location: 'Brgy. Cabintan',
     duration: 'Day hike · 7–8 hours',
     difficulty: 'Moderate',
     price: 2100,
