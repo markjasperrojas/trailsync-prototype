@@ -39,14 +39,14 @@ This checklist converts the development plan in `README.md` into the project’s
 
 **Goal:** make every prototype page reachable through the application shell.
 
-- [ ] Public layout
-- [ ] Tourist dashboard layout
-- [ ] Guide dashboard layout
-- [ ] Admin / tourism-officer dashboard layout
-- [ ] Header, footer, navigation, and sidebar
-- [ ] Simple client-side routing
-- [ ] Page transitions
-- [ ] Verify navigation between all prototype pages
+- [x] Public layout
+- [x] Tourist dashboard layout
+- [x] Guide dashboard layout
+- [x] Admin / tourism-officer dashboard layout
+- [x] Header, footer, navigation, and sidebar
+- [x] Simple client-side routing
+- [x] Page transitions
+- [x] Verify navigation between all prototype pages
 
 ## Milestone 3 — Landing Page
 
