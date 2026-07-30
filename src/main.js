@@ -7,6 +7,7 @@ import { checkAvailableGuides, completeDispatchAssignment, resetDispatch, select
 import { initializeTrackingMap } from './modules/tracking/mapView.js'
 import { advanceTrekker, getTrackingState, pauseTrackingSimulation, resetTrackingSimulation, startTrackingSimulation } from './services/trackingService.js'
 import { selectForecast } from './services/weatherService.js'
+import { cancelSos, requestSos, sendSos } from './services/sosService.js'
 
 const appRoot = document.querySelector('#app')
 let activePath = '/'
@@ -100,4 +101,10 @@ appRoot.addEventListener('click', (event) => {
     selectForecast(weatherDay)
     renderActiveView()
   }
+
+  const sosAction = event.target.closest('[data-sos-action]')?.dataset.sosAction
+  if (sosAction === 'request') requestSos()
+  if (sosAction === 'cancel') cancelSos()
+  if (sosAction === 'send') sendSos()
+  if (sosAction) renderActiveView()
 })

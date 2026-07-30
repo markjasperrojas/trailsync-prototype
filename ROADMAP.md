@@ -119,13 +119,13 @@ This checklist converts the development plan in `README.md` into the project’s
 
 ## Milestone 9 — SOS Emergency
 
-- [ ] SOS trigger
-- [ ] Confirmation dialog
-- [ ] Emergency-alert-sent state
-- [ ] Guide notification simulation
-- [ ] Tourism-office notification simulation
-- [ ] Location-sharing simulation
-- [ ] Verify the complete emergency-response flow
+- [x] SOS trigger
+- [x] Confirmation dialog
+- [x] Emergency-alert-sent state
+- [x] Guide notification simulation
+- [x] Tourism-office notification simulation
+- [x] Location-sharing simulation
+- [x] Verify the complete emergency-response flow
 
 ## Milestone 10 — Digital Certificate
 
