@@ -8,16 +8,16 @@ This checklist converts the development plan in `README.md` into the project’s
 
 **Goal:** establish a clean, running Vite foundation with scalable architecture.
 
-- [ ] Create the Vite project.
-- [ ] Configure the recommended `src/` and `public/` folder structure.
-- [ ] Install required dependencies (Tailwind CSS, Lucide Icons, Chart.js, and Leaflet.js as needed).
-- [ ] Configure Git.
+- [x] Create the Vite project.
+- [x] Configure the recommended `src/` and `public/` folder structure.
+- [x] Install required dependencies (Tailwind CSS, Lucide Icons, Chart.js, and Leaflet.js as needed).
+- [x] Configure Git.
 - [ ] Configure ESLint (optional).
 - [ ] Configure Prettier (optional).
-- [ ] Configure Tailwind CSS.
-- [ ] Create global styles.
-- [ ] Define the color palette.
-- [ ] Define the typography system.
+- [x] Configure Tailwind CSS.
+- [x] Create global styles.
+- [x] Define the color palette.
+- [x] Define the typography system.
 
 ## Milestone 1 — Design System
 
