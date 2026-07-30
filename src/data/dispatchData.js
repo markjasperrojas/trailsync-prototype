@@ -1,7 +1,7 @@
 export const pendingDispatchBooking = {
   id: 'BK-2026-0810',
   guestName: 'Maria Santos',
-  trail: 'Mount Pulag',
+  trail: 'Alto Peak',
   schedule: 'August 10, 2026 · 5:00 AM',
   groupSize: 4,
   package: 'Comfort trek',

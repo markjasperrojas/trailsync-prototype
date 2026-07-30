@@ -42,7 +42,7 @@ export function initializeAnalyticsCharts() {
   make('trail-chart', {
     type: 'doughnut',
     data: {
-      labels: ['Pulag', 'Ulap', 'Pinatubo', 'Other'],
+      labels: ['Alto Peak', 'Sulfatara', 'Mount Janagdan', 'Other'],
       datasets: [
         { data: chartData.trails, backgroundColor: ['#1f5639', '#73ad4a', '#b87918', '#dce2dd'] },
       ],

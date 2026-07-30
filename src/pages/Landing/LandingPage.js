@@ -2,21 +2,21 @@ import { Button, Card, StatusBadge } from '../../components/index.js'
 
 const trails = [
   {
-    name: 'Mount Pulag',
+    name: 'Alto Peak',
     location: 'Benguet',
     level: 'Moderate',
     tone: 'warning',
     className: 'trail-card--pulag',
   },
   {
-    name: 'Mount Ulap',
+    name: 'Sulfatara',
     location: 'Itogon, Benguet',
     level: 'Beginner friendly',
     tone: 'success',
     className: 'trail-card--ulap',
   },
   {
-    name: 'Mount Pinatubo',
+    name: 'Mount Janagdan',
     location: 'Zambales',
     level: 'Moderate',
     tone: 'warning',

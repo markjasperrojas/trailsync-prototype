@@ -34,7 +34,7 @@ export const trekRoute = [
   {
     lat: 16.6114,
     lng: 120.9165,
-    label: 'Mount Pulag summit',
+    label: 'Alto Peak summit',
     distance: '4.8 km',
     eta: 'Arrived',
     time: '7:40 AM',
@@ -42,7 +42,7 @@ export const trekRoute = [
 ]
 
 export const trekDetails = {
-  trail: 'Mount Pulag sunrise trek',
+  trail: 'Alto Peak sunrise trek',
   tourist: 'Maria Santos',
   guide: 'Elena Garcia',
   startTime: '5:00 AM',

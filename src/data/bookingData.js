@@ -3,7 +3,7 @@ export const bookingSteps = ['Trail', 'Schedule', 'Package', 'Guide', 'Review']
 export const trails = [
   {
     id: 'pulag',
-    name: 'Mount Pulag',
+    name: 'Alto Peak',
     location: 'Kabayan, Benguet',
     duration: '2 days · 1 night',
     difficulty: 'Moderate',
@@ -12,7 +12,7 @@ export const trails = [
   },
   {
     id: 'ulap',
-    name: 'Mount Ulap',
+    name: 'Sulfatara',
     location: 'Itogon, Benguet',
     duration: 'Day hike · 6–7 hours',
     difficulty: 'Beginner friendly',
@@ -21,7 +21,7 @@ export const trails = [
   },
   {
     id: 'pinatubo',
-    name: 'Mount Pinatubo',
+    name: 'Mount Janagdan',
     location: 'Botolan, Zambales',
     duration: 'Day hike · 7–8 hours',
     difficulty: 'Moderate',
