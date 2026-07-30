@@ -6,6 +6,7 @@ import { canAdvanceBooking, changeBookingStep, confirmBooking, resetBooking, sel
 import { checkAvailableGuides, completeDispatchAssignment, resetDispatch, selectDispatchGuide } from './services/dispatchService.js'
 import { initializeTrackingMap } from './modules/tracking/mapView.js'
 import { advanceTrekker, getTrackingState, pauseTrackingSimulation, resetTrackingSimulation, startTrackingSimulation } from './services/trackingService.js'
+import { selectForecast } from './services/weatherService.js'
 
 const appRoot = document.querySelector('#app')
 let activePath = '/'
@@ -93,4 +94,10 @@ appRoot.addEventListener('click', (event) => {
     stopTrackingTimer()
   }
   if (trackingAction) renderActiveView()
+
+  const weatherDay = event.target.closest('[data-weather-day]')?.dataset.weatherDay
+  if (weatherDay) {
+    selectForecast(weatherDay)
+    renderActiveView()
+  }
 })

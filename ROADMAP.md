@@ -110,12 +110,12 @@ This checklist converts the development plan in `README.md` into the project’s
 
 ## Milestone 8 — Weather Intelligence
 
-- [ ] Current weather display
-- [ ] Forecast display
-- [ ] Trail status
-- [ ] Risk level
-- [ ] Recommendation (for example, Safe / Proceed or Heavy Rain / Delay Trek)
-- [ ] Verify the weather-monitoring module
+- [x] Current weather display
+- [x] Forecast display
+- [x] Trail status
+- [x] Risk level
+- [x] Recommendation (for example, Safe / Proceed or Heavy Rain / Delay Trek)
+- [x] Verify the weather-monitoring module
 
 ## Milestone 9 — SOS Emergency
 
