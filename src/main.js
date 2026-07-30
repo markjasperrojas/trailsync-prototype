@@ -8,6 +8,7 @@ import { initializeTrackingMap } from './modules/tracking/mapView.js'
 import { advanceTrekker, getTrackingState, pauseTrackingSimulation, resetTrackingSimulation, startTrackingSimulation } from './services/trackingService.js'
 import { selectForecast } from './services/weatherService.js'
 import { cancelSos, requestSos, sendSos } from './services/sosService.js'
+import { downloadCertificate, generateCertificate } from './services/certificateService.js'
 
 const appRoot = document.querySelector('#app')
 let activePath = '/'
@@ -107,4 +108,9 @@ appRoot.addEventListener('click', (event) => {
   if (sosAction === 'cancel') cancelSos()
   if (sosAction === 'send') sendSos()
   if (sosAction) renderActiveView()
+
+  const certificateAction = event.target.closest('[data-certificate-action]')?.dataset.certificateAction
+  if (certificateAction === 'generate') generateCertificate()
+  if (certificateAction === 'download') downloadCertificate()
+  if (certificateAction) renderActiveView()
 })

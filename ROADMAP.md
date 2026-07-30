@@ -129,11 +129,11 @@ This checklist converts the development plan in `README.md` into the project’s
 
 ## Milestone 10 — Digital Certificate
 
-- [ ] Trek-completed trigger/state
-- [ ] Generate certificate
-- [ ] Certificate preview
-- [ ] Certificate download
-- [ ] Verify the certificate-generation prototype
+- [x] Trek-completed trigger/state
+- [x] Generate certificate
+- [x] Certificate preview
+- [x] Certificate download
+- [x] Verify the certificate-generation prototype
 
 ## Milestone 11 — Analytics Dashboard
 

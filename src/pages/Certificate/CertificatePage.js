@@ -1,2 +1,7 @@
-import { PlaceholderPage } from '../pageTemplate.js'
-export const CertificatePage = () => PlaceholderPage({ eyebrow: 'Trek completion', title: 'Digital certificates', description: 'Certificate generation, preview, and download will be built in Milestone 10.', actionLabel: 'View certificate' })
+import { Button, StatusBadge } from '../../components/index.js'
+import { hasGeneratedCertificate } from '../../services/certificateService.js'
+
+export function CertificatePage() {
+  const generated = hasGeneratedCertificate()
+  return `<main class="page-content certificate-page"><div class="certificate-page__heading"><p class="eyebrow">Trek completion</p><h1>Carry the achievement with you.</h1><p class="page-content__intro">Celebrate every completed journey with a TrailSync digital certificate.</p></div>${generated ? `<section class="certificate-preview"><div class="certificate-preview__paper"><p class="eyebrow">Certificate of completion</p><h2>Maria Santos</h2><p>has successfully completed</p><h3>Mount Pulag Sunrise Trek</h3><p>August 10, 2026</p><span>TrailSync · Trek safely, explore deeply.</span></div><div class="certificate-preview__actions">${StatusBadge({ label: 'Certificate generated', tone: 'success' })}${Button({ label: 'Download certificate', attributes: 'data-certificate-action="download"' })}${Button({ label: 'Generate again', variant: 'secondary', attributes: 'data-certificate-action="generate"' })}</div></section>` : `<section class="certificate-ready"><span aria-hidden="true">✦</span><p class="eyebrow">Trek completed</p><h2>Your Mount Pulag trek is complete.</h2><p>Generate a personalized certificate for Maria Santos and keep a record of this trail milestone.</p>${Button({ label: 'Generate certificate', attributes: 'data-certificate-action="generate"' })}</section>`}</main>`
+}
