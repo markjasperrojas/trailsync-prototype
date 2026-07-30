@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "../components/components.css";
 
 :root {
   --color-forest-950: #0c2418;
@@ -32,6 +33,46 @@ button, input, textarea, select { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 
 :focus-visible { outline: 3px solid var(--color-leaf-500); outline-offset: 3px; }
+
+.gallery-shell {
+  width: min(100%, 72rem);
+  margin: 0 auto;
+  padding: clamp(1.5rem, 5vw, 4rem) 1.25rem 4rem;
+}
+
+.gallery-intro {
+  max-width: 42rem;
+  margin-bottom: 3rem;
+}
+
+.gallery-intro > p:last-child {
+  max-width: 34rem;
+  margin: 1.25rem 0 0;
+  color: var(--color-slate-600);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.gallery-section {
+  padding: 1.5rem 0;
+  border-top: 1px solid rgb(31 86 57 / 14%);
+}
+
+.gallery-section__heading { margin-bottom: 1.25rem; }
+.gallery-section__heading h2 { margin: 0; color: var(--color-forest-950); font-size: 1.25rem; }
+.gallery-section__heading p { margin: .35rem 0 0; color: var(--color-slate-600); line-height: 1.5; }
+.gallery-stack { display: grid; gap: 1rem; }
+.sidebar-preview { max-width: 15rem; }
+.gallery-row { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; margin: .8rem 0; }
+.gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; align-items: start; }
+.gallery-grid--wide { grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr); }
+.progress-panel { padding: 1.25rem; border: 1px solid #dce2dd; border-radius: 1rem; background: #fff; }
+
+@media (max-width: 640px) {
+  .navbar { align-items: flex-start; flex-direction: column; padding: 1rem; }
+  .navbar__links { flex-wrap: wrap; margin: -.2rem; }
+  .gallery-grid, .gallery-grid--wide { grid-template-columns: 1fr; }
+}
 
 .app-shell {
   display: grid;

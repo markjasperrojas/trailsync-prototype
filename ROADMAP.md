@@ -23,17 +23,17 @@ This checklist converts the development plan in `README.md` into the project’s
 
 **Goal:** build reusable UI components; do not add business logic yet.
 
-- [ ] Button
-- [ ] Input
-- [ ] Card
-- [ ] Badge / StatusBadge
-- [ ] Modal
-- [ ] Navbar
-- [ ] Sidebar
-- [ ] Breadcrumb
-- [ ] Progress Bar
-- [ ] Toast Notification
-- [ ] Loading Spinner
+- [x] Button
+- [x] Input
+- [x] Card
+- [x] Badge / StatusBadge
+- [x] Modal
+- [x] Navbar
+- [x] Sidebar
+- [x] Breadcrumb
+- [x] Progress Bar
+- [x] Toast Notification
+- [x] Loading Spinner
 
 ## Milestone 2 — Application Layout and Navigation
 
