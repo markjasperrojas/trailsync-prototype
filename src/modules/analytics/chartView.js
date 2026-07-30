@@ -1,5 +1,90 @@
 import Chart from 'chart.js/auto'
 import { chartData } from '../../data/analyticsData.js'
 let charts = []
-const make = (id, config) => { const el = document.querySelector(`#${id}`); if (el) charts.push(new Chart(el, config)) }
-export function initializeAnalyticsCharts() { charts.forEach((chart) => chart.destroy()); charts = []; const green = '#347a51'; make('visitor-chart', { type: 'line', data: { labels: chartData.labels, datasets: [{ data: chartData.visitors, borderColor: green, backgroundColor: 'rgba(52,122,81,.12)', fill: true, tension: .35 }] }, options: { plugins: { legend: { display: false } }, scales: { y: { display: false }, x: { grid: { display: false } } } } }); make('revenue-chart', { type: 'bar', data: { labels: chartData.labels, datasets: [{ data: chartData.revenue, backgroundColor: '#8cbf59', borderRadius: 6 }] }, options: { plugins: { legend: { display: false } }, scales: { y: { display: false }, x: { grid: { display: false } } } } }); make('trail-chart', { type: 'doughnut', data: { labels: ['Pulag', 'Ulap', 'Pinatubo', 'Other'], datasets: [{ data: chartData.trails, backgroundColor: ['#1f5639', '#73ad4a', '#b87918', '#dce2dd'] }] }, options: { plugins: { legend: { position: 'bottom' } } } }); make('workload-chart', { type: 'bar', data: { labels: ['Elena', 'Marco', 'Lia', 'Noel'], datasets: [{ label: 'Trek assignments', data: chartData.workload, backgroundColor: green, borderRadius: 5 }] }, options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, ticks: { stepSize: 5 } } } } }); make('delay-chart', { type: 'line', data: { labels: chartData.labels, datasets: [{ label: 'Delays', data: chartData.weatherDelays, borderColor: '#b87918', tension: .35 }] }, options: { plugins: { legend: { display: false } } } }); make('incident-chart', { type: 'line', data: { labels: chartData.labels, datasets: [{ label: 'Incidents', data: chartData.incidents, borderColor: '#b42318', tension: .35 }] }, options: { plugins: { legend: { display: false } } } }) }
+const make = (id, config) => {
+  const el = document.querySelector(`#${id}`)
+  if (el) charts.push(new Chart(el, config))
+}
+export function initializeAnalyticsCharts() {
+  charts.forEach((chart) => chart.destroy())
+  charts = []
+  const green = '#347a51'
+  make('visitor-chart', {
+    type: 'line',
+    data: {
+      labels: chartData.labels,
+      datasets: [
+        {
+          data: chartData.visitors,
+          borderColor: green,
+          backgroundColor: 'rgba(52,122,81,.12)',
+          fill: true,
+          tension: 0.35,
+        },
+      ],
+    },
+    options: {
+      plugins: { legend: { display: false } },
+      scales: { y: { display: false }, x: { grid: { display: false } } },
+    },
+  })
+  make('revenue-chart', {
+    type: 'bar',
+    data: {
+      labels: chartData.labels,
+      datasets: [{ data: chartData.revenue, backgroundColor: '#8cbf59', borderRadius: 6 }],
+    },
+    options: {
+      plugins: { legend: { display: false } },
+      scales: { y: { display: false }, x: { grid: { display: false } } },
+    },
+  })
+  make('trail-chart', {
+    type: 'doughnut',
+    data: {
+      labels: ['Pulag', 'Ulap', 'Pinatubo', 'Other'],
+      datasets: [
+        { data: chartData.trails, backgroundColor: ['#1f5639', '#73ad4a', '#b87918', '#dce2dd'] },
+      ],
+    },
+    options: { plugins: { legend: { position: 'bottom' } } },
+  })
+  make('workload-chart', {
+    type: 'bar',
+    data: {
+      labels: ['Elena', 'Marco', 'Lia', 'Noel'],
+      datasets: [
+        {
+          label: 'Trek assignments',
+          data: chartData.workload,
+          backgroundColor: green,
+          borderRadius: 5,
+        },
+      ],
+    },
+    options: {
+      plugins: { legend: { display: false } },
+      scales: { y: { beginAtZero: true, ticks: { stepSize: 5 } } },
+    },
+  })
+  make('delay-chart', {
+    type: 'line',
+    data: {
+      labels: chartData.labels,
+      datasets: [
+        { label: 'Delays', data: chartData.weatherDelays, borderColor: '#b87918', tension: 0.35 },
+      ],
+    },
+    options: { plugins: { legend: { display: false } } },
+  })
+  make('incident-chart', {
+    type: 'line',
+    data: {
+      labels: chartData.labels,
+      datasets: [
+        { label: 'Incidents', data: chartData.incidents, borderColor: '#b42318', tension: 0.35 },
+      ],
+    },
+    options: { plugins: { legend: { display: false } } },
+  })
+}

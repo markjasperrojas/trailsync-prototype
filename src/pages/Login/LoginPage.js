@@ -5,7 +5,10 @@ import { getCurrentUser } from '../../services/authService.js'
 function AccountOption(account) {
   return `
     <article class="account-option">
-      <div class="account-option__avatar" aria-hidden="true">${account.name.split(' ').map((name) => name[0]).join('')}</div>
+      <div class="account-option__avatar" aria-hidden="true">${account.name
+        .split(' ')
+        .map((name) => name[0])
+        .join('')}</div>
       <div><h3>${account.roleLabel}</h3><p>${account.name}</p><span>${account.email}</span></div>
       ${Button({ label: `Continue as ${account.roleLabel}`, variant: 'secondary', size: 'sm', attributes: `data-demo-role="${account.role}"` })}
     </article>

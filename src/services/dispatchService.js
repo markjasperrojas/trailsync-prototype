@@ -12,7 +12,9 @@ export function checkAvailableGuides() {
 }
 
 export function selectDispatchGuide(guideId) {
-  const guide = dispatchGuides.find((item) => item.id === guideId && item.availability === 'Available')
+  const guide = dispatchGuides.find(
+    (item) => item.id === guideId && item.availability === 'Available',
+  )
   if (guide) dispatchState = { ...dispatchState, selectedGuideId: guideId }
 }
 

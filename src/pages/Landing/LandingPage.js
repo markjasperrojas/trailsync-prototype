@@ -1,9 +1,27 @@
 import { Button, Card, StatusBadge } from '../../components/index.js'
 
 const trails = [
-  { name: 'Mount Pulag', location: 'Benguet', level: 'Moderate', tone: 'warning', className: 'trail-card--pulag' },
-  { name: 'Mount Ulap', location: 'Itogon, Benguet', level: 'Beginner friendly', tone: 'success', className: 'trail-card--ulap' },
-  { name: 'Mount Pinatubo', location: 'Zambales', level: 'Moderate', tone: 'warning', className: 'trail-card--pinatubo' },
+  {
+    name: 'Mount Pulag',
+    location: 'Benguet',
+    level: 'Moderate',
+    tone: 'warning',
+    className: 'trail-card--pulag',
+  },
+  {
+    name: 'Mount Ulap',
+    location: 'Itogon, Benguet',
+    level: 'Beginner friendly',
+    tone: 'success',
+    className: 'trail-card--ulap',
+  },
+  {
+    name: 'Mount Pinatubo',
+    location: 'Zambales',
+    level: 'Moderate',
+    tone: 'warning',
+    className: 'trail-card--pinatubo',
+  },
 ]
 
 function Feature({ number, title, description }) {
@@ -11,13 +29,18 @@ function Feature({ number, title, description }) {
 }
 
 export function LandingPage() {
-  const trailCards = trails.map((trail) => Card({
-    className: `trail-card ${trail.className}`,
-    eyebrow: trail.location,
-    title: trail.name,
-    content: '<p>Guided route, prepared logistics, and a clear trail plan from start to finish.</p>',
-    footer: StatusBadge({ label: trail.level, tone: trail.tone }),
-  })).join('')
+  const trailCards = trails
+    .map((trail) =>
+      Card({
+        className: `trail-card ${trail.className}`,
+        eyebrow: trail.location,
+        title: trail.name,
+        content:
+          '<p>Guided route, prepared logistics, and a clear trail plan from start to finish.</p>',
+        footer: StatusBadge({ label: trail.level, tone: trail.tone }),
+      }),
+    )
+    .join('')
 
   return `
     <main class="landing-page page-content">

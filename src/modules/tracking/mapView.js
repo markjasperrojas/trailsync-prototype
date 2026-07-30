@@ -22,8 +22,32 @@ export function initializeTrackingMap(routeIndex) {
 
   const tourist = trekRoute[routeIndex]
   const guide = trekRoute[Math.min(routeIndex + 1, trekRoute.length - 1)]
-  L.circleMarker([tourist.lat, tourist.lng], { radius: 9, color: '#ffffff', weight: 3, fillColor: '#1f5639', fillOpacity: 1 }).bindTooltip('Maria · Trekker', { direction: 'top' }).addTo(map)
-  L.circleMarker([guide.lat, guide.lng], { radius: 8, color: '#ffffff', weight: 3, fillColor: '#b87918', fillOpacity: 1 }).bindTooltip('Elena · Guide', { direction: 'top' }).addTo(map)
-  L.circleMarker(coordinates.at(-1), { radius: 6, color: '#ffffff', weight: 2, fillColor: '#73ad4a', fillOpacity: 1 }).bindTooltip('Summit', { direction: 'top' }).addTo(map)
+  L.circleMarker([tourist.lat, tourist.lng], {
+    radius: 9,
+    color: '#ffffff',
+    weight: 3,
+    fillColor: '#1f5639',
+    fillOpacity: 1,
+  })
+    .bindTooltip('Maria · Trekker', { direction: 'top' })
+    .addTo(map)
+  L.circleMarker([guide.lat, guide.lng], {
+    radius: 8,
+    color: '#ffffff',
+    weight: 3,
+    fillColor: '#b87918',
+    fillOpacity: 1,
+  })
+    .bindTooltip('Elena · Guide', { direction: 'top' })
+    .addTo(map)
+  L.circleMarker(coordinates.at(-1), {
+    radius: 6,
+    color: '#ffffff',
+    weight: 2,
+    fillColor: '#73ad4a',
+    fillOpacity: 1,
+  })
+    .bindTooltip('Summit', { direction: 'top' })
+    .addTo(map)
   map.fitBounds(L.latLngBounds(coordinates).pad(0.25))
 }

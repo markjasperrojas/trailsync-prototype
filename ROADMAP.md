@@ -12,8 +12,8 @@ This checklist converts the development plan in `README.md` into the project’s
 - [x] Configure the recommended `src/` and `public/` folder structure.
 - [x] Install required dependencies (Tailwind CSS, Lucide Icons, Chart.js, and Leaflet.js as needed).
 - [x] Configure Git.
-- [ ] Configure ESLint (optional).
-- [ ] Configure Prettier (optional).
+- [x] Configure ESLint (optional).
+- [x] Configure Prettier (optional).
 - [x] Configure Tailwind CSS.
 - [x] Create global styles.
 - [x] Define the color palette.
@@ -163,15 +163,15 @@ This checklist converts the development plan in `README.md` into the project’s
 
 ## Definition of Done — Apply to Every Milestone
 
-- [ ] Navigation works correctly.
-- [ ] Components are reusable and UI is not duplicated.
-- [ ] Dummy data is centralized.
-- [ ] Code is modular: UI, logic, data, and utilities remain separate.
-- [ ] Desktop and mobile layouts are responsive.
-- [ ] Styling is consistent and buttons provide feedback.
-- [ ] Folder structure remains organized.
-- [ ] No console errors.
-- [ ] Code is formatted and documented.
+- [x] Navigation works correctly.
+- [x] Components are reusable and UI is not duplicated.
+- [x] Dummy data is centralized.
+- [x] Code is modular: UI, logic, data, and utilities remain separate.
+- [x] Desktop and mobile layouts are responsive.
+- [x] Styling is consistent and buttons provide feedback.
+- [x] Folder structure remains organized.
+- [x] No console errors.
+- [x] Code is formatted and documented.
 
 ## Engineering Guardrails
 

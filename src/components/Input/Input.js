@@ -1,4 +1,12 @@
-export function Input({ id, label, type = 'text', placeholder = '', hint = '', required = false, value = '' }) {
+export function Input({
+  id,
+  label,
+  type = 'text',
+  placeholder = '',
+  hint = '',
+  required = false,
+  value = '',
+}) {
   const requiredMark = required ? '<span aria-hidden="true">*</span>' : ''
   const describedBy = hint ? `aria-describedby="${id}-hint"` : ''
 

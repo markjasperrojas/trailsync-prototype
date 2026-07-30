@@ -1,6 +1,11 @@
 import { Button, Card, StatusBadge } from '../components/index.js'
 
-export function PlaceholderPage({ eyebrow, title, description, actionLabel = 'Explore this module' }) {
+export function PlaceholderPage({
+  eyebrow,
+  title,
+  description,
+  actionLabel = 'Explore this module',
+}) {
   return `
     <main class="page-content">
       <p class="eyebrow">${eyebrow}</p>

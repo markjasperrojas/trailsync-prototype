@@ -2,7 +2,12 @@ import { Button, ProgressBar, StatusBadge } from '../../components/index.js'
 import { bookingSteps, guides, packages, schedules, trails } from '../../data/bookingData.js'
 import { getBookingState } from '../../services/bookingService.js'
 
-const formatCurrency = (amount) => new Intl.NumberFormat('en-PH', { style: 'currency', currency: 'PHP', maximumFractionDigits: 0 }).format(amount)
+const formatCurrency = (amount) =>
+  new Intl.NumberFormat('en-PH', {
+    style: 'currency',
+    currency: 'PHP',
+    maximumFractionDigits: 0,
+  }).format(amount)
 const getById = (items, id) => items.find((item) => item.id === id)
 
 function Choice({ field, value, selected, title, detail, meta = '' }) {
@@ -10,10 +15,14 @@ function Choice({ field, value, selected, title, detail, meta = '' }) {
 }
 
 function StepContent(state) {
-  if (state.step === 0) return `<div class="booking-options booking-options--cards">${trails.map((trail) => Choice({ field: 'trailId', value: trail.id, selected: state.trailId === trail.id, title: trail.name, detail: `${trail.location} · ${trail.duration}<br>${trail.description}`, meta: `From ${formatCurrency(trail.price)}` })).join('')}</div>`
-  if (state.step === 1) return `<div class="booking-options">${schedules.map((schedule) => Choice({ field: 'scheduleId', value: schedule.id, selected: state.scheduleId === schedule.id, title: schedule.date, detail: schedule.day, meta: `${schedule.availability} slots left` })).join('')}</div>`
-  if (state.step === 2) return `<div class="booking-options">${packages.map((item) => Choice({ field: 'packageId', value: item.id, selected: state.packageId === item.id, title: item.name, detail: item.description, meta: item.price ? `+${formatCurrency(item.price)}` : 'Included' })).join('')}</div>`
-  if (state.step === 3) return `<div class="booking-options booking-options--guides">${guides.map((guide) => Choice({ field: 'guideId', value: guide.id, selected: state.guideId === guide.id, title: guide.name, detail: `${guide.experience} · ${guide.specialty}<br>★ ${guide.rating} rating`, meta: guide.availability })).join('')}</div>`
+  if (state.step === 0)
+    return `<div class="booking-options booking-options--cards">${trails.map((trail) => Choice({ field: 'trailId', value: trail.id, selected: state.trailId === trail.id, title: trail.name, detail: `${trail.location} · ${trail.duration}<br>${trail.description}`, meta: `From ${formatCurrency(trail.price)}` })).join('')}</div>`
+  if (state.step === 1)
+    return `<div class="booking-options">${schedules.map((schedule) => Choice({ field: 'scheduleId', value: schedule.id, selected: state.scheduleId === schedule.id, title: schedule.date, detail: schedule.day, meta: `${schedule.availability} slots left` })).join('')}</div>`
+  if (state.step === 2)
+    return `<div class="booking-options">${packages.map((item) => Choice({ field: 'packageId', value: item.id, selected: state.packageId === item.id, title: item.name, detail: item.description, meta: item.price ? `+${formatCurrency(item.price)}` : 'Included' })).join('')}</div>`
+  if (state.step === 3)
+    return `<div class="booking-options booking-options--guides">${guides.map((guide) => Choice({ field: 'guideId', value: guide.id, selected: state.guideId === guide.id, title: guide.name, detail: `${guide.experience} · ${guide.specialty}<br>★ ${guide.rating} rating`, meta: guide.availability })).join('')}</div>`
   return BookingReview(state)
 }
 
@@ -39,7 +48,9 @@ export function BookingPage() {
 
   const currentStep = bookingSteps[state.step]
   const progress = Math.round(((state.step + 1) / bookingSteps.length) * 100)
-  const nextDisabled = state.step < bookingSteps.length - 1 && ![state.trailId, state.scheduleId, state.packageId, state.guideId][state.step]
+  const nextDisabled =
+    state.step < bookingSteps.length - 1 &&
+    ![state.trailId, state.scheduleId, state.packageId, state.guideId][state.step]
 
   return `
     <main class="page-content booking-page">
