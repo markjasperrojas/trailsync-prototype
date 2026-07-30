@@ -3,6 +3,7 @@ import { App } from './App.js'
 import { startRouter } from './router/router.js'
 import { signInAs, signOut } from './services/authService.js'
 import { canAdvanceBooking, changeBookingStep, confirmBooking, resetBooking, selectBookingOption } from './services/bookingService.js'
+import { checkAvailableGuides, completeDispatchAssignment, resetDispatch, selectDispatchGuide } from './services/dispatchService.js'
 
 const appRoot = document.querySelector('#app')
 let activePath = '/'
@@ -40,5 +41,19 @@ appRoot.addEventListener('click', (event) => {
   if (bookingAction === 'restart') resetBooking()
   if (bookingAction) {
     appRoot.innerHTML = App(activePath)
+    return
   }
+
+  const guideId = event.target.closest('[data-dispatch-select]')?.dataset.dispatchSelect
+  if (guideId) {
+    selectDispatchGuide(guideId)
+    appRoot.innerHTML = App(activePath)
+    return
+  }
+
+  const dispatchAction = event.target.closest('[data-dispatch-action]')?.dataset.dispatchAction
+  if (dispatchAction === 'check') checkAvailableGuides()
+  if (dispatchAction === 'complete') completeDispatchAssignment()
+  if (dispatchAction === 'restart') resetDispatch()
+  if (dispatchAction) appRoot.innerHTML = App(activePath)
 })

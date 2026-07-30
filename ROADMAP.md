@@ -88,12 +88,12 @@ This checklist converts the development plan in `README.md` into the project’s
 
 **Goal:** demonstrate automated guide assignment.
 
-- [ ] Display available guides
-- [ ] Check guide availability from dummy data
-- [ ] Select/assign a guide for a booking
-- [ ] Show guide experience, availability, and assignment status
-- [ ] Assignment-complete state
-- [ ] Verify the guide-assignment module
+- [x] Display available guides
+- [x] Check guide availability from dummy data
+- [x] Select/assign a guide for a booking
+- [x] Show guide experience, availability, and assignment status
+- [x] Assignment-complete state
+- [x] Verify the guide-assignment module
 
 ## Milestone 7 — Live Trekker Monitoring
 
