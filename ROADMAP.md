@@ -63,11 +63,11 @@ This checklist converts the development plan in `README.md` into the project’s
 
 **Goal:** simulate role-based access without a backend.
 
-- [ ] Login screen
-- [ ] Demo accounts: Tourist, Guide, and Tourism Officer
-- [ ] Role selection
-- [ ] Redirect each role to the appropriate dashboard
-- [ ] Verify the complete login flow
+- [x] Login screen
+- [x] Demo accounts: Tourist, Guide, and Tourism Officer
+- [x] Role selection
+- [x] Redirect each role to the appropriate dashboard
+- [x] Verify the complete login flow
 
 ## Milestone 5 — Tourist Booking
 

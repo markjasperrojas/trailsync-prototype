@@ -1,4 +1,5 @@
 import { Breadcrumb, Sidebar } from '../components/index.js'
+import { getCurrentUser } from '../services/authService.js'
 
 const dashboardItems = [
   { label: 'Book a trek', href: '#/booking', route: '/booking' },
@@ -12,10 +13,11 @@ const dashboardItems = [
 
 export function DashboardLayout({ content, currentPath, title, role = 'Tourist portal' }) {
   const current = dashboardItems.find((item) => item.route === currentPath)
+  const user = getCurrentUser()
 
   return `
     <div class="dashboard-layout">
-      <header class="dashboard-header"><a class="dashboard-header__brand" href="#/">TrailSync</a><span>${role}</span><a href="#/login">Switch role</a></header>
+      <header class="dashboard-header"><a class="dashboard-header__brand" href="#/">TrailSync</a><span>${user?.name ?? role}</span><a href="#/login">Switch role</a><button class="dashboard-header__signout" type="button" data-sign-out>Sign out</button></header>
       <div class="dashboard-layout__body">
         ${Sidebar({ title: role, items: dashboardItems.map((item) => ({ ...item, active: item.route === currentPath })) })}
         <div class="dashboard-layout__main">
