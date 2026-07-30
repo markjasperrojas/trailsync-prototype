@@ -5,6 +5,7 @@ import { signInAs, signOut } from './services/authService.js'
 import { canAdvanceBooking, changeBookingStep, confirmBooking, resetBooking, selectBookingOption } from './services/bookingService.js'
 import { checkAvailableGuides, completeDispatchAssignment, resetDispatch, selectDispatchGuide } from './services/dispatchService.js'
 import { initializeTrackingMap } from './modules/tracking/mapView.js'
+import { initializeAnalyticsCharts } from './modules/analytics/chartView.js'
 import { advanceTrekker, getTrackingState, pauseTrackingSimulation, resetTrackingSimulation, startTrackingSimulation } from './services/trackingService.js'
 import { selectForecast } from './services/weatherService.js'
 import { cancelSos, requestSos, sendSos } from './services/sosService.js'
@@ -17,6 +18,7 @@ let trackingTimer
 function renderActiveView() {
   appRoot.innerHTML = App(activePath)
   if (activePath === '/tracking') initializeTrackingMap(getTrackingState().routeIndex)
+  if (activePath === '/analytics') initializeAnalyticsCharts()
 }
 
 function stopTrackingTimer() {

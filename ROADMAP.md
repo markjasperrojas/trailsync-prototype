@@ -137,15 +137,15 @@ This checklist converts the development plan in `README.md` into the project’s
 
 ## Milestone 11 — Analytics Dashboard
 
-- [ ] Dashboard cards: visitors, revenue, active treks, and guides
-- [ ] Visitor trends chart
-- [ ] Revenue chart
-- [ ] Popular trails chart
-- [ ] Guide workload chart
-- [ ] Weather delays chart
-- [ ] Safety incidents chart
-- [ ] Centralized analytics dummy data
-- [ ] Verify the executive analytics dashboard
+- [x] Dashboard cards: visitors, revenue, active treks, and guides
+- [x] Visitor trends chart
+- [x] Revenue chart
+- [x] Popular trails chart
+- [x] Guide workload chart
+- [x] Weather delays chart
+- [x] Safety incidents chart
+- [x] Centralized analytics dummy data
+- [x] Verify the executive analytics dashboard
 
 ## Milestone 12 — Final Polish
 
