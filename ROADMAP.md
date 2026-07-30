@@ -99,14 +99,14 @@ This checklist converts the development plan in `README.md` into the project’s
 
 **Goal:** deliver the prototype’s highest-priority module.
 
-- [ ] Interactive map
-- [ ] Tourist marker
-- [ ] Guide marker
-- [ ] Simulated GPS movement with dummy coordinates
-- [ ] Trail progress
-- [ ] ETA and distance display
-- [ ] Progress timeline
-- [ ] Verify the live-tracking experience
+- [x] Interactive map
+- [x] Tourist marker
+- [x] Guide marker
+- [x] Simulated GPS movement with dummy coordinates
+- [x] Trail progress
+- [x] ETA and distance display
+- [x] Progress timeline
+- [x] Verify the live-tracking experience
 
 ## Milestone 8 — Weather Intelligence
 
