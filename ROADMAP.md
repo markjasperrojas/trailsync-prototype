@@ -73,16 +73,16 @@ This checklist converts the development plan in `README.md` into the project’s
 
 **Goal:** complete the first end-to-end tourism workflow.
 
-- [ ] Choose trail
-- [ ] Choose schedule
-- [ ] Choose package
-- [ ] Assign guide
-- [ ] Review booking
-- [ ] Booking success screen
-- [ ] Multi-step form behavior and progress indicator
-- [ ] Booking summary
-- [ ] Centralized booking dummy data
-- [ ] Verify the complete booking workflow
+- [x] Choose trail
+- [x] Choose schedule
+- [x] Choose package
+- [x] Assign guide
+- [x] Review booking
+- [x] Booking success screen
+- [x] Multi-step form behavior and progress indicator
+- [x] Booking summary
+- [x] Centralized booking dummy data
+- [x] Verify the complete booking workflow
 
 ## Milestone 6 — Guide Dispatching
 
