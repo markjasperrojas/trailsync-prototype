@@ -50,14 +50,14 @@ This checklist converts the development plan in `README.md` into the project’s
 
 ## Milestone 3 — Landing Page
 
-- [ ] Hero section
-- [ ] About TrailSync section
-- [ ] Key features section
-- [ ] Popular trails section
-- [ ] Calls to action
-- [ ] Login button
-- [ ] Book Trek button
-- [ ] Verify a professional, responsive landing page
+- [x] Hero section
+- [x] About TrailSync section
+- [x] Key features section
+- [x] Popular trails section
+- [x] Calls to action
+- [x] Login button
+- [x] Book Trek button
+- [x] Verify a professional, responsive landing page
 
 ## Milestone 4 — Authentication Prototype
 
