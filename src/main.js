@@ -27,6 +27,7 @@ import {
 import { selectForecast } from './services/weatherService.js'
 import { cancelSos, requestSos, sendSos } from './services/sosService.js'
 import { downloadCertificate, generateCertificate } from './services/certificateService.js'
+import { approveBookingRequest, rejectBookingRequest } from './services/approvalService.js'
 
 const appRoot = document.querySelector('#app')
 let activePath = '/'
@@ -133,4 +134,10 @@ appRoot.addEventListener('click', (event) => {
   if (certificateAction === 'generate') generateCertificate()
   if (certificateAction === 'download') downloadCertificate()
   if (certificateAction) renderActiveView()
+
+  const approvalAction = event.target.closest('[data-approval-action]')?.dataset.approvalAction
+  const requestId = event.target.closest('[data-request-id]')?.dataset.requestId
+  if (approvalAction === 'approve') approveBookingRequest(requestId)
+  if (approvalAction === 'reject') rejectBookingRequest(requestId)
+  if (approvalAction) renderActiveView()
 })

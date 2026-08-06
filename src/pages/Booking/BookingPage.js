@@ -39,7 +39,7 @@ function BookingReview(state) {
 function BookingSuccess(state) {
   const trail = getById(trails, state.trailId)
   const schedule = getById(schedules, state.scheduleId)
-  return `<main class="page-content booking-success"><span class="booking-success__icon" aria-hidden="true">✓</span><p class="eyebrow">Booking confirmed</p><h1>You’re on the trail list.</h1><p class="page-content__intro">Your ${trail.name} trek on ${schedule.date} has been saved. We’ll keep your itinerary and guide details ready in TrailSync.</p><div class="booking-success__actions">${Button({ label: 'Plan another trek', variant: 'secondary', attributes: 'data-booking-action="restart"' })}${Button({ label: 'Go to my dashboard', attributes: 'onclick="location.hash=\'#/tourist\'"' })}</div></main>`
+  return `<main class="page-content booking-success"><span class="booking-success__icon" aria-hidden="true">✓</span><p class="eyebrow">Booking request submitted</p><h1>Your request is under review.</h1><p class="page-content__intro">Your ${trail.name} trek on ${schedule.date} has been sent to the Tourism Office for approval. You’ll see the updated status in TrailSync.</p><div class="booking-success__actions">${Button({ label: 'Plan another trek', variant: 'secondary', attributes: 'data-booking-action="restart"' })}${Button({ label: 'Go to my dashboard', attributes: 'onclick="location.hash=\'#/tourist\'"' })}</div></main>`
 }
 
 export function BookingPage() {

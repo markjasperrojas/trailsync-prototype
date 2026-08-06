@@ -84,6 +84,19 @@ This checklist converts the development plan in `README.md` into the project’s
 - [x] Centralized booking dummy data
 - [x] Verify the complete booking workflow
 
+## Milestone 5A — Tourism Officer Booking Approval
+
+**Goal:** route tourist booking requests through Tourism Office review before guide dispatch.
+
+- [x] Create centralized booking-request records and statuses.
+- [x] Submit new tourist bookings as pending approval requests.
+- [x] Add an officer-only Booking Approvals route and sidebar entry.
+- [x] Display pending, approved, and rejected requests with booking details.
+- [x] Approve or reject pending booking requests.
+- [x] Make approved requests available to the Guide Dispatch module.
+- [x] Update the request to guide-assigned when dispatch is completed.
+- [x] Verify the request-to-approval state flow.
+
 ## Milestone 6 — Guide Dispatching
 
 **Goal:** demonstrate automated guide assignment.

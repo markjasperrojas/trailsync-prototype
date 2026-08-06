@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import '../components/components.css';
+@import './approvals.css';
 
 :root {
   --color-forest-950: #0c2418;

@@ -1,5 +1,6 @@
 import { Card, StatusBadge } from '../../components/index.js'
 import { getCurrentUser } from '../../services/authService.js'
+import { getLatestRequestForHiker } from '../../services/approvalService.js'
 
 const roleContent = {
   tourist: {
@@ -34,6 +35,8 @@ const roleContent = {
 export function DashboardPage() {
   const user = getCurrentUser()
   const details = roleContent[user?.role] ?? roleContent.tourist
+  const latestRequest = user?.role === 'tourist' ? getLatestRequestForHiker(user.name) : null
+  const statusTone = { pending: 'warning', approved: 'success', rejected: 'danger' }
 
   return `
     <main class="page-content dashboard-page">
@@ -41,6 +44,7 @@ export function DashboardPage() {
       <h1>Welcome, ${user?.name?.split(' ')[0] ?? 'Explorer'}.</h1>
       <p class="page-content__intro">${details.description}</p>
       <div class="dashboard-page__cards">
+        ${latestRequest ? Card({ title: 'Latest booking request', content: `<p>${latestRequest.trail} · ${latestRequest.schedule}</p>`, footer: StatusBadge({ label: latestRequest.status === 'pending' ? 'Pending Tourism Office approval' : latestRequest.status, tone: statusTone[latestRequest.status] }) }) : ''}
         ${details.cards.map(([title, message]) => Card({ title, content: `<p>${message}</p>`, footer: StatusBadge({ label: 'Prototype data', tone: 'info' }) })).join('')}
       </div>
     </main>

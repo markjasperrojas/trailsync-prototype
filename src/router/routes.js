@@ -3,6 +3,7 @@ import { GuideLayout } from '../layouts/GuideLayout.js'
 import { PublicLayout } from '../layouts/PublicLayout.js'
 import { TouristLayout } from '../layouts/TouristLayout.js'
 import { AnalyticsPage } from '../pages/Analytics/AnalyticsPage.js'
+import { ApprovalsPage } from '../pages/Approvals/ApprovalsPage.js'
 import { BookingPage } from '../pages/Booking/BookingPage.js'
 import { CertificatePage } from '../pages/Certificate/CertificatePage.js'
 import { DispatchPage } from '../pages/Dispatch/DispatchPage.js'
@@ -19,6 +20,7 @@ export const routes = {
   '/tourist': { title: 'Tourist dashboard', page: DashboardPage, layout: TouristLayout },
   '/guide': { title: 'Guide dashboard', page: DashboardPage, layout: GuideLayout },
   '/admin': { title: 'Tourism office dashboard', page: DashboardPage, layout: AdminLayout },
+  '/admin/bookings': { title: 'Booking approvals', page: ApprovalsPage, layout: AdminLayout },
   '/booking': { title: 'Book a trek', page: BookingPage, layout: TouristLayout },
   '/dispatch': { title: 'Guide dispatch', page: DispatchPage, layout: GuideLayout },
   '/tracking': { title: 'Live tracking', page: TrackingPage, layout: GuideLayout },

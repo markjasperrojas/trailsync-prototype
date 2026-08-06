@@ -1,4 +1,5 @@
-import { bookingSteps } from '../data/bookingData.js'
+import { bookingSteps, packages, schedules, trails } from '../data/bookingData.js'
+import { createBookingRequest } from './approvalService.js'
 
 const createInitialState = () => ({
   step: 0,
@@ -35,7 +36,17 @@ export function canAdvanceBooking() {
 }
 
 export function confirmBooking() {
-  bookingState = { ...bookingState, confirmed: true }
+  const trail = trails.find((item) => item.id === bookingState.trailId)
+  const schedule = schedules.find((item) => item.id === bookingState.scheduleId)
+  const packageOption = packages.find((item) => item.id === bookingState.packageId)
+  const request = createBookingRequest({
+    hiker: 'Maria Santos',
+    trail: trail.name,
+    schedule: schedule.date,
+    packageName: packageOption.name,
+    groupSize: 1,
+  })
+  bookingState = { ...bookingState, confirmed: true, requestId: request.id }
 }
 
 export function resetBooking() {

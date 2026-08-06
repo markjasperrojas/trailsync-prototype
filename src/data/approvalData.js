@@ -1,0 +1,32 @@
+export const initialBookingRequests = [
+  {
+    id: 'BK-2026-0811',
+    hiker: 'Jose Ramos',
+    trail: 'Sulfatara',
+    schedule: 'August 17, 2026',
+    packageName: 'Essential trek',
+    groupSize: 3,
+    status: 'pending',
+    submittedAt: 'Today, 8:30 AM',
+  },
+  {
+    id: 'BK-2026-0812',
+    hiker: 'Angela Lim',
+    trail: 'Mount Janagdan',
+    schedule: 'August 24, 2026',
+    packageName: 'Premium trek',
+    groupSize: 2,
+    status: 'pending',
+    submittedAt: 'Today, 9:15 AM',
+  },
+  {
+    id: 'BK-2026-0809',
+    hiker: 'Noel Cruz',
+    trail: 'Alto Peak',
+    schedule: 'August 10, 2026',
+    packageName: 'Comfort trek',
+    groupSize: 4,
+    status: 'approved',
+    submittedAt: 'Yesterday',
+  },
+]
