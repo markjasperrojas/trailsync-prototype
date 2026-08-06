@@ -97,6 +97,17 @@ This checklist converts the development plan in `README.md` into the project’s
 - [x] Update the request to guide-assigned when dispatch is completed.
 - [x] Verify the request-to-approval state flow.
 
+## Milestone 5B — Role-Based Navigation and Access Control
+
+**Goal:** keep navigation consistent with the signed-in role and prevent prototype pages from appearing under the wrong portal.
+
+- [x] Select public or dashboard layout from the active user session.
+- [x] Keep each signed-in role’s sidebar stable across allowed pages.
+- [x] Define allowed roles for every protected route.
+- [x] Show an access-denied state for unavailable role/page combinations.
+- [x] Keep logged-out users in the public navigation shell.
+- [ ] Add dedicated “My Bookings” and “Assigned Treks” pages if the prototype scope expands.
+
 ## Milestone 6 — Guide Dispatching
 
 **Goal:** demonstrate automated guide assignment.

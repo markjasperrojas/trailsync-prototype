@@ -1,7 +1,3 @@
-import { AdminLayout } from '../layouts/AdminLayout.js'
-import { GuideLayout } from '../layouts/GuideLayout.js'
-import { PublicLayout } from '../layouts/PublicLayout.js'
-import { TouristLayout } from '../layouts/TouristLayout.js'
 import { AnalyticsPage } from '../pages/Analytics/AnalyticsPage.js'
 import { ApprovalsPage } from '../pages/Approvals/ApprovalsPage.js'
 import { BookingPage } from '../pages/Booking/BookingPage.js'
@@ -15,17 +11,25 @@ import { TrackingPage } from '../pages/Tracking/TrackingPage.js'
 import { WeatherPage } from '../pages/Weather/WeatherPage.js'
 
 export const routes = {
-  '/': { title: 'Explore TrailSync', page: LandingPage, layout: PublicLayout },
-  '/login': { title: 'Sign in', page: LoginPage, layout: PublicLayout },
-  '/tourist': { title: 'Tourist dashboard', page: DashboardPage, layout: TouristLayout },
-  '/guide': { title: 'Guide dashboard', page: DashboardPage, layout: GuideLayout },
-  '/admin': { title: 'Tourism office dashboard', page: DashboardPage, layout: AdminLayout },
-  '/admin/bookings': { title: 'Booking approvals', page: ApprovalsPage, layout: AdminLayout },
-  '/booking': { title: 'Book a trek', page: BookingPage, layout: TouristLayout },
-  '/dispatch': { title: 'Guide dispatch', page: DispatchPage, layout: GuideLayout },
-  '/tracking': { title: 'Live tracking', page: TrackingPage, layout: GuideLayout },
-  '/weather': { title: 'Weather conditions', page: WeatherPage, layout: TouristLayout },
-  '/sos': { title: 'SOS assistance', page: SosPage, layout: GuideLayout },
-  '/certificate': { title: 'Digital certificates', page: CertificatePage, layout: TouristLayout },
-  '/analytics': { title: 'Tourism analytics', page: AnalyticsPage, layout: AdminLayout },
+  '/': { title: 'Explore TrailSync', page: LandingPage },
+  '/login': { title: 'Sign in', page: LoginPage },
+  '/tourist': { title: 'Tourist dashboard', page: DashboardPage, allowedRoles: ['tourist'] },
+  '/guide': { title: 'Guide dashboard', page: DashboardPage, allowedRoles: ['guide'] },
+  '/admin': { title: 'Tourism office dashboard', page: DashboardPage, allowedRoles: ['officer'] },
+  '/admin/bookings': { title: 'Booking approvals', page: ApprovalsPage, allowedRoles: ['officer'] },
+  '/booking': { title: 'Book a trek', page: BookingPage, allowedRoles: ['tourist'] },
+  '/dispatch': { title: 'Guide dispatch', page: DispatchPage, allowedRoles: ['guide', 'officer'] },
+  '/tracking': { title: 'Live tracking', page: TrackingPage, allowedRoles: ['guide', 'officer'] },
+  '/weather': {
+    title: 'Weather conditions',
+    page: WeatherPage,
+    allowedRoles: ['tourist', 'guide', 'officer'],
+  },
+  '/sos': { title: 'SOS assistance', page: SosPage, allowedRoles: ['tourist', 'guide', 'officer'] },
+  '/certificate': {
+    title: 'Digital certificates',
+    page: CertificatePage,
+    allowedRoles: ['tourist'],
+  },
+  '/analytics': { title: 'Tourism analytics', page: AnalyticsPage, allowedRoles: ['officer'] },
 }
