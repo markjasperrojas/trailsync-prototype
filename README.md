@@ -51,6 +51,7 @@ The application uses hash-based routing, so routes can be opened directly after 
 | --- | --- |
 | `#/` | Landing page |
 | `#/login` | Demo authentication |
+| `#/trails` | Public trail discovery |
 | `#/booking` | Tourist booking workflow |
 | `#/guides` | Tour guide management and assignment |
 | `#/tracking` | Live trekker monitoring and GPS simulation |

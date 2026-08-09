@@ -4,6 +4,7 @@
 @import './guideAssignments.css';
 @import './guideProfile.css';
 @import './guideSchedule.css';
+@import './trails.css';
 
 :root {
   --color-forest-950: #0c2418;

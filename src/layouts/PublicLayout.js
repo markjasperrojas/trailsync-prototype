@@ -7,7 +7,7 @@ export function PublicLayout({ content, currentPath }) {
         brand: 'TrailSync',
         items: [
           { label: 'Home', href: '#/', active: currentPath === '/' },
-          { label: 'Trails', href: '#/booking', active: currentPath === '/booking' },
+          { label: 'Trails', href: '#/trails', active: currentPath === '/trails' },
           { label: 'About', href: '#/weather', active: currentPath === '/weather' },
           { label: 'Sign in', href: '#/login', active: currentPath === '/login' },
         ],

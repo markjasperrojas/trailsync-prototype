@@ -158,6 +158,18 @@ This checklist converts the development plan in `README.md` into the project’s
 - [x] Keep guide profile editing with guides; officers have a read-only operational view.
 - [x] Verify formatting, linting, and production build.
 
+## Milestone 5G — Public Trail Discovery and Booking Access
+
+**Goal:** let visitors discover trails while keeping booking actions within the Tourist workspace.
+
+- [x] Add a public Trails route and point the public navigation to it.
+- [x] Display Alto Peak, Sulfatara, and Mount Janagdan with Brgy. Cabintan details.
+- [x] Restrict the booking workflow to signed-in Tourist accounts.
+- [x] Show a clear sign-in prompt to visitors who open a protected page.
+- [x] Keep role-mismatched protected pages unavailable.
+- [x] Update landing-page trail calls to action.
+- [x] Verify formatting, linting, and production build.
+
 ## Milestone 6 — Guide Assignment Workflow
 
 **Goal:** demonstrate automated guide assignment.

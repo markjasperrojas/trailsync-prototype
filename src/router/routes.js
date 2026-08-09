@@ -11,11 +11,13 @@ import { LandingPage } from '../pages/Landing/LandingPage.js'
 import { LoginPage } from '../pages/Login/LoginPage.js'
 import { SosPage } from '../pages/SOS/SosPage.js'
 import { TrackingPage } from '../pages/Tracking/TrackingPage.js'
+import { TrailsPage } from '../pages/Trails/TrailsPage.js'
 import { WeatherPage } from '../pages/Weather/WeatherPage.js'
 
 export const routes = {
   '/': { title: 'Explore TrailSync', page: LandingPage },
   '/login': { title: 'Sign in', page: LoginPage },
+  '/trails': { title: 'Explore trails', page: TrailsPage },
   '/tourist': { title: 'Tourist dashboard', page: DashboardPage, allowedRoles: ['tourist'] },
   '/guide': { title: 'Guide dashboard', page: DashboardPage, allowedRoles: ['guide'] },
   '/guide/assignments': {

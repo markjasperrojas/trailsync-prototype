@@ -16,8 +16,8 @@ export function App(currentPath) {
   const route = routes[currentPath] ?? routes['/']
   const user = getCurrentUser()
   const isPublic = !route.allowedRoles
-  const canAccess = isPublic || !user || route.allowedRoles.includes(user.role)
-  const content = canAccess ? route.page() : AccessDeniedPage()
+  const canAccess = isPublic || route.allowedRoles.includes(user?.role)
+  const content = canAccess ? route.page() : AccessDeniedPage({ requiresSignIn: !user })
   const layout = isPublic || !user ? PublicLayout : roleLayouts[user.role]
   document.title = `${route.title} | TrailSync`
 

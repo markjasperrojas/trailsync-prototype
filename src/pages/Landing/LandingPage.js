@@ -50,7 +50,7 @@ export function LandingPage() {
           <h1>Every trail,<br><em>in sync.</em></h1>
           <p class="page-content__intro">Plan with confidence, trek with clarity, and stay connected to the people who keep every journey safe.</p>
           <div class="landing-hero__actions">
-            ${Button({ label: 'Book a trek', attributes: 'onclick="location.hash=\'#/booking\'"' })}
+            ${Button({ label: 'Explore trails', attributes: 'onclick="location.hash=\'#/trails\'"' })}
             ${Button({ label: 'Sign in', variant: 'secondary', attributes: 'onclick="location.hash=\'#/login\'"' })}
           </div>
           <div class="landing-hero__trust"><span aria-hidden="true">●</span> Built for trekkers, guides, and local tourism offices</div>
@@ -76,13 +76,13 @@ export function LandingPage() {
       </section>
 
       <section class="landing-section" aria-labelledby="trails-title">
-        <div class="landing-section__heading landing-section__heading--row"><div><p class="eyebrow">Start exploring</p><h2 id="trails-title">Popular trails.</h2></div><a class="text-link" href="#/booking">View all trails <span aria-hidden="true">→</span></a></div>
+        <div class="landing-section__heading landing-section__heading--row"><div><p class="eyebrow">Start exploring</p><h2 id="trails-title">Popular trails.</h2></div><a class="text-link" href="#/trails">View all trails <span aria-hidden="true">→</span></a></div>
         <div class="trails-grid">${trailCards}</div>
       </section>
 
       <section class="landing-cta">
         <div><p class="eyebrow">Your next trail is waiting</p><h2>Ready when you are.</h2><p>Find your route, meet your guide, and make the most of every mile.</p></div>
-        ${Button({ label: 'Book your trek', attributes: 'onclick="location.hash=\'#/booking\'"' })}
+        ${Button({ label: 'Explore all trails', attributes: 'onclick="location.hash=\'#/trails\'"' })}
       </section>
     </main>
   `
