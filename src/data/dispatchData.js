@@ -9,6 +9,16 @@ export const pendingDispatchBooking = {
 
 export const dispatchGuides = [
   {
+    id: 'daniel',
+    name: 'Daniel Reyes',
+    initials: 'DR',
+    experience: '7 years',
+    specialty: 'Trail coordination',
+    rating: '4.9',
+    availability: 'Available',
+    status: 'Ready for assignment',
+  },
+  {
     id: 'elena',
     name: 'Elena Garcia',
     initials: 'EG',

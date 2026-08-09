@@ -7,7 +7,13 @@ const dashboardItems = [
     label: 'Guide dispatch',
     href: '#/dispatch',
     route: '/dispatch',
-    portals: ['guide', 'officer'],
+    portals: ['officer'],
+  },
+  {
+    label: 'My assignments',
+    href: '#/guide/assignments',
+    route: '/guide/assignments',
+    portals: ['guide'],
   },
   { label: 'Live tracking', href: '#/tracking', route: '/tracking', portals: ['guide', 'officer'] },
   {

@@ -1,7 +1,7 @@
 import { Button, Card, StatusBadge } from '../../components/index.js'
-import { dispatchGuides } from '../../data/dispatchData.js'
 import { getApprovedRequests, getBookingRequestById } from '../../services/approvalService.js'
 import { getDispatchState } from '../../services/dispatchService.js'
+import { getGuideProfiles } from '../../services/guideService.js'
 
 function BookingCard(booking) {
   return Card({
@@ -23,14 +23,15 @@ function AssignmentComplete(guide, booking) {
 
 export function DispatchPage() {
   const state = getDispatchState()
-  const selectedGuide = dispatchGuides.find((guide) => guide.id === state.selectedGuideId)
+  const guides = getGuideProfiles()
+  const selectedGuide = guides.find((guide) => guide.id === state.selectedGuideId)
   const booking = getBookingRequestById(state.bookingId) ?? getApprovedRequests()[0]
 
   return `
     <main class="page-content dispatch-page">
       <div class="dispatch-page__heading"><p class="eyebrow">Guide operations</p><h1>Assign the right guide.</h1><p class="page-content__intro">TrailSync checks availability first, then helps the tourism team make a confident assignment.</p></div>
       <div class="dispatch-flow" aria-label="Guide dispatch progress"><span class="is-complete">1. Booking received</span><span class="${state.stage !== 'pending' ? 'is-complete' : 'is-current'}">2. Check availability</span><span class="${selectedGuide ? 'is-complete' : state.stage === 'available' ? 'is-current' : ''}">3. Select guide</span><span class="${state.stage === 'complete' ? 'is-complete' : ''}">4. Assignment complete</span></div>
-      ${state.stage === 'complete' ? AssignmentComplete(selectedGuide, booking) : `<div class="dispatch-layout"><div>${BookingCard(booking)}</div><section class="dispatch-assignment"><div class="dispatch-assignment__heading"><div><p class="eyebrow">${state.stage === 'pending' ? 'Start assignment' : 'Available guides'}</p><h2>${state.stage === 'pending' ? 'Ready to find a guide?' : 'Choose a guide for this trek.'}</h2></div>${state.stage === 'available' ? StatusBadge({ label: `${dispatchGuides.filter((guide) => guide.availability === 'Available').length} guides available`, tone: 'success' }) : ''}</div>${state.stage === 'pending' ? `<p class="dispatch-assignment__empty">This approved booking is ready for guide assignment.</p>${Button({ label: 'Check available guides', attributes: 'data-dispatch-action="check"' })}` : `<div class="dispatch-guides">${dispatchGuides.map((guide) => GuideCard({ guide, selected: guide.id === state.selectedGuideId })).join('')}</div><footer class="dispatch-assignment__footer">${selectedGuide ? `<div><span>Selected guide</span><strong>${selectedGuide.name}</strong></div>${Button({ label: 'Complete assignment', attributes: 'data-dispatch-action="complete"' })}` : '<span>Select an available guide to continue.</span>'}</footer>`}</section></div>`}
+      ${state.stage === 'complete' ? AssignmentComplete(selectedGuide, booking) : `<div class="dispatch-layout"><div>${BookingCard(booking)}</div><section class="dispatch-assignment"><div class="dispatch-assignment__heading"><div><p class="eyebrow">${state.stage === 'pending' ? 'Start assignment' : 'Available guides'}</p><h2>${state.stage === 'pending' ? 'Ready to find a guide?' : 'Choose a guide for this trek.'}</h2></div>${state.stage === 'available' ? StatusBadge({ label: `${guides.filter((guide) => guide.availability === 'Available').length} guides available`, tone: 'success' }) : ''}</div>${state.stage === 'pending' ? `<p class="dispatch-assignment__empty">This approved booking is ready for guide assignment.</p>${Button({ label: 'Check available guides', attributes: 'data-dispatch-action="check"' })}` : `<div class="dispatch-guides">${guides.map((guide) => GuideCard({ guide, selected: guide.id === state.selectedGuideId })).join('')}</div><footer class="dispatch-assignment__footer">${selectedGuide ? `<div><span>Selected guide</span><strong>${selectedGuide.name}</strong></div>${Button({ label: 'Complete assignment', attributes: 'data-dispatch-action="complete"' })}` : '<span>Select an available guide to continue.</span>'}</footer>`}</section></div>`}
     </main>
   `
 }

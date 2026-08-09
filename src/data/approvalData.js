@@ -1,5 +1,17 @@
 export const initialBookingRequests = [
   {
+    id: 'BK-2026-0810',
+    hiker: 'Lara Mendoza',
+    trail: 'Alto Peak',
+    schedule: 'August 10, 2026',
+    packageName: 'Comfort trek',
+    groupSize: 4,
+    status: 'pending-guide-response',
+    guideId: 'daniel',
+    guideName: 'Daniel Reyes',
+    submittedAt: 'Today, 7:45 AM',
+  },
+  {
     id: 'BK-2026-0811',
     hiker: 'Jose Ramos',
     trail: 'Sulfatara',

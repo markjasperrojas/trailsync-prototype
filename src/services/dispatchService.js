@@ -1,5 +1,5 @@
-import { dispatchGuides } from '../data/dispatchData.js'
 import { assignGuideToBooking, getApprovedRequests } from './approvalService.js'
+import { getGuideProfiles } from './guideService.js'
 
 const initialState = () => ({ stage: 'pending', selectedGuideId: '', bookingId: '' })
 let dispatchState = initialState()
@@ -14,7 +14,7 @@ export function checkAvailableGuides() {
 }
 
 export function selectDispatchGuide(guideId) {
-  const guide = dispatchGuides.find(
+  const guide = getGuideProfiles().find(
     (item) => item.id === guideId && item.availability === 'Available',
   )
   if (guide) dispatchState = { ...dispatchState, selectedGuideId: guideId }
@@ -22,7 +22,7 @@ export function selectDispatchGuide(guideId) {
 
 export function completeDispatchAssignment() {
   if (dispatchState.selectedGuideId && dispatchState.bookingId) {
-    const guide = dispatchGuides.find((item) => item.id === dispatchState.selectedGuideId)
+    const guide = getGuideProfiles().find((item) => item.id === dispatchState.selectedGuideId)
     assignGuideToBooking(dispatchState.bookingId, guide.name)
     dispatchState = { ...dispatchState, stage: 'complete' }
   }

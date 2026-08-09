@@ -34,6 +34,28 @@ export function rejectBookingRequest(id) {
 
 export function assignGuideToBooking(id, guideName) {
   requests = requests.map((request) =>
-    request.id === id ? { ...request, status: 'guide-assigned', guideName } : request,
+    request.id === id
+      ? {
+          ...request,
+          status: 'pending-guide-response',
+          guideName,
+          guideId: guideName.toLowerCase().split(' ')[0],
+        }
+      : request,
   )
+}
+
+export const getGuideAssignments = (guideId) =>
+  requests.filter(
+    (request) =>
+      request.guideId === guideId &&
+      ['pending-guide-response', 'guide-confirmed'].includes(request.status),
+  )
+
+export function respondToGuideAssignment(id, guideId, response) {
+  requests = requests.map((request) => {
+    if (request.id !== id || request.guideId !== guideId) return request
+    if (response === 'accept') return { ...request, status: 'guide-confirmed' }
+    return { ...request, status: 'approved', guideId: undefined, guideName: undefined }
+  })
 }

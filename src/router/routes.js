@@ -3,6 +3,7 @@ import { ApprovalsPage } from '../pages/Approvals/ApprovalsPage.js'
 import { BookingPage } from '../pages/Booking/BookingPage.js'
 import { CertificatePage } from '../pages/Certificate/CertificatePage.js'
 import { DispatchPage } from '../pages/Dispatch/DispatchPage.js'
+import { GuideAssignmentsPage } from '../pages/GuideAssignments/GuideAssignmentsPage.js'
 import { DashboardPage } from '../pages/Dashboard/DashboardPage.js'
 import { LandingPage } from '../pages/Landing/LandingPage.js'
 import { LoginPage } from '../pages/Login/LoginPage.js'
@@ -15,10 +16,15 @@ export const routes = {
   '/login': { title: 'Sign in', page: LoginPage },
   '/tourist': { title: 'Tourist dashboard', page: DashboardPage, allowedRoles: ['tourist'] },
   '/guide': { title: 'Guide dashboard', page: DashboardPage, allowedRoles: ['guide'] },
+  '/guide/assignments': {
+    title: 'My assignments',
+    page: GuideAssignmentsPage,
+    allowedRoles: ['guide'],
+  },
   '/admin': { title: 'Tourism office dashboard', page: DashboardPage, allowedRoles: ['officer'] },
   '/admin/bookings': { title: 'Booking approvals', page: ApprovalsPage, allowedRoles: ['officer'] },
   '/booking': { title: 'Book a trek', page: BookingPage, allowedRoles: ['tourist'] },
-  '/dispatch': { title: 'Guide dispatch', page: DispatchPage, allowedRoles: ['guide', 'officer'] },
+  '/dispatch': { title: 'Guide dispatch', page: DispatchPage, allowedRoles: ['officer'] },
   '/tracking': { title: 'Live tracking', page: TrackingPage, allowedRoles: ['guide', 'officer'] },
   '/weather': {
     title: 'Weather conditions',

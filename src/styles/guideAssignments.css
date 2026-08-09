@@ -1,0 +1,66 @@
+.guide-assignments-page {
+  max-width: 58rem;
+  margin: 0 auto;
+}
+.guide-assignments-page__heading,
+.guide-availability {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: start;
+}
+.guide-assignments-page__heading {
+  margin-bottom: 1.5rem;
+}
+.guide-availability {
+  padding: 1.25rem;
+  border: 1px solid #dce2dd;
+  border-radius: 1rem;
+  background: #fff;
+}
+.guide-availability h2,
+.guide-assignment-list h2 {
+  margin: 0;
+  color: var(--color-forest-950);
+  font-size: 1.3rem;
+}
+.guide-availability p:not(.eyebrow) {
+  margin: 0.35rem 0 0;
+  color: var(--color-slate-600);
+}
+.guide-availability > div:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  gap: 0.6rem;
+  align-items: center;
+}
+.guide-assignment-list {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+.guide-assignment__footer,
+.guide-assignment__footer > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.guide-empty {
+  padding: 1.25rem;
+  border: 1px dashed #c7d1c9;
+  border-radius: 0.8rem;
+  color: var(--color-slate-600);
+  background: #fff;
+}
+@media (max-width: 700px) {
+  .guide-assignments-page__heading,
+  .guide-availability {
+    flex-direction: column;
+  }
+  .guide-availability > div:last-child {
+    justify-content: start;
+  }
+}

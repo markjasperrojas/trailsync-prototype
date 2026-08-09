@@ -108,6 +108,20 @@ This checklist converts the development plan in `README.md` into the project’s
 - [x] Keep logged-out users in the public navigation shell.
 - [ ] Add dedicated “My Bookings” and “Assigned Treks” pages if the prototype scope expands.
 
+## Milestone 5C — Guide Assignment Response and Availability
+
+**Goal:** let guides manage their availability and respond to assignments sent by the Tourism Office.
+
+- [x] Add a guide-specific My Assignments page and sidebar entry.
+- [x] Keep Guide Dispatch available only to Tourism Officers.
+- [x] Link the guide demo account to a guide profile.
+- [x] Show guide availability and allow Available/Unavailable changes.
+- [x] Display pending assignment requests for the signed-in guide.
+- [x] Let guides accept or decline an assignment.
+- [x] Return declined requests to the approved dispatch queue.
+- [x] Record accepted requests as guide-confirmed.
+- [x] Verify the guide assignment and availability state flow.
+
 ## Milestone 6 — Guide Dispatching
 
 **Goal:** demonstrate automated guide assignment.

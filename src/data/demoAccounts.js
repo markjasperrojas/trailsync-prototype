@@ -13,6 +13,7 @@ export const demoAccounts = {
     roleLabel: 'Guide',
     name: 'Daniel Reyes',
     email: 'daniel.reyes@trailsync.demo',
+    guideId: 'daniel',
     dashboardPath: '/guide',
   },
   officer: {

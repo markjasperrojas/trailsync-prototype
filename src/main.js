@@ -1,7 +1,7 @@
 import './styles/global.css'
 import { App } from './App.js'
 import { startRouter } from './router/router.js'
-import { signInAs, signOut } from './services/authService.js'
+import { getCurrentUser, signInAs, signOut } from './services/authService.js'
 import {
   canAdvanceBooking,
   changeBookingStep,
@@ -27,6 +27,8 @@ import {
 import { selectForecast } from './services/weatherService.js'
 import { cancelSos, requestSos, sendSos } from './services/sosService.js'
 import { downloadCertificate, generateCertificate } from './services/certificateService.js'
+import { respondToGuideAssignment } from './services/approvalService.js'
+import { toggleGuideAvailability } from './services/guideService.js'
 import { approveBookingRequest, rejectBookingRequest } from './services/approvalService.js'
 
 const appRoot = document.querySelector('#app')
@@ -134,6 +136,15 @@ appRoot.addEventListener('click', (event) => {
   if (certificateAction === 'generate') generateCertificate()
   if (certificateAction === 'download') downloadCertificate()
   if (certificateAction) renderActiveView()
+
+  const guideAction = event.target.closest('[data-guide-action]')?.dataset.guideAction
+  const assignmentId = event.target.closest('[data-assignment-id]')?.dataset.assignmentId
+  if (guideAction === 'toggle-availability') toggleGuideAvailability(getCurrentUser()?.guideId)
+  if (guideAction === 'accept')
+    respondToGuideAssignment(assignmentId, getCurrentUser()?.guideId, 'accept')
+  if (guideAction === 'decline')
+    respondToGuideAssignment(assignmentId, getCurrentUser()?.guideId, 'decline')
+  if (guideAction) renderActiveView()
 
   const approvalAction = event.target.closest('[data-approval-action]')?.dataset.approvalAction
   const requestId = event.target.closest('[data-request-id]')?.dataset.requestId
