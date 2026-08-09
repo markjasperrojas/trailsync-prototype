@@ -3,7 +3,7 @@ import { dispatchGuides } from '../data/dispatchData.js'
 let guideProfiles = dispatchGuides.map((guide) => ({
   ...guide,
   phone: guide.id === 'daniel' ? '0917 555 0101' : '0917 555 0100',
-  email: `${guide.id}@trailsync.demo`,
+  email: `${guide.id}@trailsync.ph`,
   certifications:
     guide.id === 'daniel' ? 'First Aid and Basic Life Support' : 'First Aid certified',
   bio:

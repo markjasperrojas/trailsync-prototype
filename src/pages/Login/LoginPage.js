@@ -22,19 +22,19 @@ export function LoginPage() {
     <main class="login-page page-content">
       <section class="login-page__panel" aria-labelledby="login-title">
         <div class="login-page__intro">
-          <p class="eyebrow">TrailSync demo access</p>
-          <h1 id="login-title">Choose your path.</h1>
-          <p>Explore the prototype as a tourist, guide, or tourism officer. No password or backend is required.</p>
+          <p class="eyebrow">TrailSync access</p>
+          <h1 id="login-title">Welcome to TrailSync.</h1>
+          <p>Select your role to continue to the workspace designed for you.</p>
           ${user ? `<div class="login-page__session">${StatusBadge({ label: `Signed in as ${user.name}`, tone: 'success' })}<a href="#/${user.role === 'officer' ? 'admin' : user.role}" data-return-session>Return to dashboard →</a></div>` : ''}
         </div>
-        <div class="login-page__form" aria-label="Demo sign in form">
-          ${Input({ id: 'demo-email', label: 'Email address', type: 'email', placeholder: 'Choose a demo account below', hint: 'Demo accounts sign in with one click.' })}
-          ${Input({ id: 'demo-password', label: 'Password', type: 'password', placeholder: 'Not required for this prototype' })}
-          ${Button({ label: 'Sign in with demo account', attributes: 'disabled aria-disabled="true"' })}
+        <div class="login-page__form" aria-label="Sign in form">
+          ${Input({ id: 'sign-in-email', label: 'Email address', type: 'email', placeholder: 'name@example.com', hint: 'Select a role to access its workspace.' })}
+          ${Input({ id: 'sign-in-password', label: 'Password', type: 'password', placeholder: 'Enter your password' })}
+          ${Button({ label: 'Sign in', attributes: 'disabled aria-disabled="true"' })}
         </div>
       </section>
       <section class="login-page__accounts" aria-labelledby="accounts-title">
-        <div><p class="eyebrow">Demo accounts</p><h2 id="accounts-title">Select a role to continue.</h2></div>
+        <div><p class="eyebrow">Role selection</p><h2 id="accounts-title">Choose your workspace.</h2></div>
         <div class="account-options">${Object.values(demoAccounts).map(AccountOption).join('')}</div>
       </section>
     </main>

@@ -4,7 +4,7 @@ export const demoAccounts = {
     role: 'tourist',
     roleLabel: 'Tourist',
     name: 'Maria Santos',
-    email: 'maria.santos@trailsync.demo',
+    email: 'maria.santos@trailsync.ph',
     dashboardPath: '/tourist',
   },
   guide: {
@@ -12,7 +12,7 @@ export const demoAccounts = {
     role: 'guide',
     roleLabel: 'Guide',
     name: 'Daniel Reyes',
-    email: 'daniel.reyes@trailsync.demo',
+    email: 'daniel.reyes@trailsync.ph',
     guideId: 'daniel',
     dashboardPath: '/guide',
   },
@@ -21,7 +21,7 @@ export const demoAccounts = {
     role: 'officer',
     roleLabel: 'Tourism Officer',
     name: 'Ava Cruz',
-    email: 'ava.cruz@trailsync.demo',
+    email: 'ava.cruz@trailsync.ph',
     dashboardPath: '/admin',
   },
 }
