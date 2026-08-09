@@ -4,9 +4,9 @@ import { getCurrentUser } from '../services/authService.js'
 const dashboardItems = [
   { label: 'Book a trek', href: '#/booking', route: '/booking', portals: ['tourist'] },
   {
-    label: 'Guide dispatch',
-    href: '#/dispatch',
-    route: '/dispatch',
+    label: 'Tour guide management',
+    href: '#/guides',
+    route: '/guides',
     portals: ['officer'],
   },
   {

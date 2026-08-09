@@ -48,7 +48,7 @@ export function saveGuideProfile(id, values) {
         }
       : guide,
   )
-  profileFeedback = 'Profile saved. Your updated details are now visible in Guide Dispatch.'
+  profileFeedback = 'Profile saved. Your updated details are now visible in Tour Guide Management.'
   return true
 }
 

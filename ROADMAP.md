@@ -86,15 +86,15 @@ This checklist converts the development plan in `README.md` into the project’s
 
 ## Milestone 5A — Tourism Officer Booking Approval
 
-**Goal:** route tourist booking requests through Tourism Office review before guide dispatch.
+**Goal:** route tourist booking requests through Tourism Office review before tour guide management.
 
 - [x] Create centralized booking-request records and statuses.
 - [x] Submit new tourist bookings as pending approval requests.
 - [x] Add an officer-only Booking Approvals route and sidebar entry.
 - [x] Display pending, approved, and rejected requests with booking details.
 - [x] Approve or reject pending booking requests.
-- [x] Make approved requests available to the Guide Dispatch module.
-- [x] Update the request to guide-assigned when dispatch is completed.
+- [x] Make approved requests available to the Tour Guide Management module.
+- [x] Update the request when it is sent to a guide.
 - [x] Verify the request-to-approval state flow.
 
 ## Milestone 5B — Role-Based Navigation and Access Control
@@ -113,18 +113,18 @@ This checklist converts the development plan in `README.md` into the project’s
 **Goal:** let guides manage their availability and respond to assignments sent by the Tourism Office.
 
 - [x] Add a guide-specific My Assignments page and sidebar entry.
-- [x] Keep Guide Dispatch available only to Tourism Officers.
+- [x] Keep guide management available only to Tourism Officers.
 - [x] Link the guide demo account to a guide profile.
 - [x] Show guide availability and allow Available/Unavailable changes.
 - [x] Display pending assignment requests for the signed-in guide.
 - [x] Let guides accept or decline an assignment.
-- [x] Return declined requests to the approved dispatch queue.
+- [x] Return declined requests to the approved guide-management queue.
 - [x] Record accepted requests as guide-confirmed.
 - [x] Verify the guide assignment and availability state flow.
 
 ## Milestone 5D — Guide Profile Management
 
-**Goal:** let guides maintain the operational details used by Tourism Officer dispatching.
+**Goal:** let guides maintain the operational details used by Tourism Officer guide management.
 
 - [x] Add a My Profile route and Guide sidebar entry.
 - [x] Display guide contact and operational profile information.
@@ -132,7 +132,7 @@ This checklist converts the development plan in `README.md` into the project’s
 - [x] Keep the demo email address read-only.
 - [x] Validate required fields and mobile number before saving.
 - [x] Add Save and Cancel feedback.
-- [x] Centralize profile data in the Guide service for Dispatch reuse.
+- [x] Centralize profile data in the Guide service for Tour Guide Management reuse.
 - [x] Verify formatting, linting, and production build.
 
 ## Milestone 5E — Guide Schedule
@@ -146,7 +146,19 @@ This checklist converts the development plan in `README.md` into the project’s
 - [x] Keep assignment acceptance in My Assignments and schedule changes with the Tourism Office.
 - [x] Verify formatting, linting, and production build.
 
-## Milestone 6 — Guide Dispatching
+## Milestone 5F — Tourism Officer Guide Management
+
+**Goal:** give Tourism Officers one view of guide availability, workload, and booking assignment.
+
+- [x] Replace the former assignment sidebar entry and route with Tour Guide Management.
+- [x] Display the guide roster with experience, specialties, availability, and workload.
+- [x] Summarize available guides, pending guide responses, and confirmed treks.
+- [x] Keep approved-booking assignment within the management page.
+- [x] Make sent assignments clearly await a guide response before confirmation.
+- [x] Keep guide profile editing with guides; officers have a read-only operational view.
+- [x] Verify formatting, linting, and production build.
+
+## Milestone 6 — Guide Assignment Workflow
 
 **Goal:** demonstrate automated guide assignment.
 

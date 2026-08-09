@@ -28,7 +28,7 @@ export const routes = {
   '/admin': { title: 'Tourism office dashboard', page: DashboardPage, allowedRoles: ['officer'] },
   '/admin/bookings': { title: 'Booking approvals', page: ApprovalsPage, allowedRoles: ['officer'] },
   '/booking': { title: 'Book a trek', page: BookingPage, allowedRoles: ['tourist'] },
-  '/dispatch': { title: 'Guide dispatch', page: DispatchPage, allowedRoles: ['officer'] },
+  '/guides': { title: 'Tour guide management', page: DispatchPage, allowedRoles: ['officer'] },
   '/tracking': { title: 'Live tracking', page: TrackingPage, allowedRoles: ['guide', 'officer'] },
   '/weather': {
     title: 'Weather conditions',

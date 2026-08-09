@@ -52,7 +52,7 @@ The application uses hash-based routing, so routes can be opened directly after 
 | `#/` | Landing page |
 | `#/login` | Demo authentication |
 | `#/booking` | Tourist booking workflow |
-| `#/dispatch` | Guide dispatching |
+| `#/guides` | Tour guide management and assignment |
 | `#/tracking` | Live trekker monitoring and GPS simulation |
 | `#/weather` | Weather intelligence |
 | `#/sos` | Emergency-response simulation |
@@ -73,6 +73,6 @@ The application uses hash-based routing, so routes can be opened directly after 
 ### Prototype notes
 
 - Authentication is simulated with browser local storage.
-- Booking, dispatching, tracking, weather, SOS, certificates, and analytics use mock data only.
+- Booking, guide management, tracking, weather, SOS, certificates, and analytics use mock data only.
 - The tracking map uses OpenStreetMap tiles; an internet connection improves map-tile loading during local use.
 - The downloaded certificate is an HTML file so it can be opened or printed as a record of completion.

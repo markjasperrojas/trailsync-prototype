@@ -772,6 +772,41 @@ h1 {
 .dispatch-page__heading {
   margin-bottom: 1.75rem;
 }
+.guide-management-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+.guide-management-summary span {
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+  border: 1px solid #dce2dd;
+  border-radius: 999px;
+  padding: 0.45rem 0.7rem;
+  color: var(--color-slate-600);
+  background: #fff;
+  font-size: 0.8rem;
+}
+.guide-management-summary strong,
+.guide-management-roster h2,
+.guide-management-assignment h2 {
+  color: var(--color-forest-950);
+}
+.guide-management-roster,
+.guide-management-assignment {
+  display: grid;
+  gap: 0.9rem;
+}
+.guide-management-roster h2,
+.guide-management-assignment h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+.guide-management-assignment {
+  margin-top: 2.5rem;
+}
 .dispatch-flow {
   display: flex;
   gap: 0.6rem;
@@ -898,6 +933,13 @@ h1 {
   margin: 0.2rem 0 0;
   color: var(--color-slate-600);
   font-size: 0.77rem;
+}
+.dispatch-guide small {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--color-forest-600);
+  font-size: 0.72rem;
+  font-weight: 700;
 }
 .dispatch-assignment__footer {
   display: flex;
