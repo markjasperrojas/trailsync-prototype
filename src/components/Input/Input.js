@@ -5,6 +5,7 @@ export function Input({
   placeholder = '',
   hint = '',
   required = false,
+  readOnly = false,
   value = '',
 }) {
   const requiredMark = required ? '<span aria-hidden="true">*</span>' : ''
@@ -13,7 +14,7 @@ export function Input({
   return `
     <label class="field" for="${id}">
       <span class="field__label">${label} ${requiredMark}</span>
-      <input class="field__input" id="${id}" name="${id}" type="${type}" placeholder="${placeholder}" value="${value}" ${describedBy} ${required ? 'required' : ''} />
+      <input class="field__input" id="${id}" name="${id}" type="${type}" placeholder="${placeholder}" value="${value}" ${describedBy} ${required ? 'required' : ''} ${readOnly ? 'readonly' : ''} />
       ${hint ? `<span class="field__hint" id="${id}-hint">${hint}</span>` : ''}
     </label>
   `

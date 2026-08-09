@@ -122,6 +122,19 @@ This checklist converts the development plan in `README.md` into the project’s
 - [x] Record accepted requests as guide-confirmed.
 - [x] Verify the guide assignment and availability state flow.
 
+## Milestone 5D — Guide Profile Management
+
+**Goal:** let guides maintain the operational details used by Tourism Officer dispatching.
+
+- [x] Add a My Profile route and Guide sidebar entry.
+- [x] Display guide contact and operational profile information.
+- [x] Let guides edit name, mobile number, experience, specialties, certifications, and bio.
+- [x] Keep the demo email address read-only.
+- [x] Validate required fields and mobile number before saving.
+- [x] Add Save and Cancel feedback.
+- [x] Centralize profile data in the Guide service for Dispatch reuse.
+- [x] Verify formatting, linting, and production build.
+
 ## Milestone 6 — Guide Dispatching
 
 **Goal:** demonstrate automated guide assignment.

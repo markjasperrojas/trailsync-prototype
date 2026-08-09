@@ -4,6 +4,7 @@ import { BookingPage } from '../pages/Booking/BookingPage.js'
 import { CertificatePage } from '../pages/Certificate/CertificatePage.js'
 import { DispatchPage } from '../pages/Dispatch/DispatchPage.js'
 import { GuideAssignmentsPage } from '../pages/GuideAssignments/GuideAssignmentsPage.js'
+import { GuideProfilePage } from '../pages/GuideProfile/GuideProfilePage.js'
 import { DashboardPage } from '../pages/Dashboard/DashboardPage.js'
 import { LandingPage } from '../pages/Landing/LandingPage.js'
 import { LoginPage } from '../pages/Login/LoginPage.js'
@@ -21,6 +22,7 @@ export const routes = {
     page: GuideAssignmentsPage,
     allowedRoles: ['guide'],
   },
+  '/guide/profile': { title: 'My profile', page: GuideProfilePage, allowedRoles: ['guide'] },
   '/admin': { title: 'Tourism office dashboard', page: DashboardPage, allowedRoles: ['officer'] },
   '/admin/bookings': { title: 'Booking approvals', page: ApprovalsPage, allowedRoles: ['officer'] },
   '/booking': { title: 'Book a trek', page: BookingPage, allowedRoles: ['tourist'] },

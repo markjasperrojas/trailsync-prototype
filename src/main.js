@@ -28,7 +28,11 @@ import { selectForecast } from './services/weatherService.js'
 import { cancelSos, requestSos, sendSos } from './services/sosService.js'
 import { downloadCertificate, generateCertificate } from './services/certificateService.js'
 import { respondToGuideAssignment } from './services/approvalService.js'
-import { toggleGuideAvailability } from './services/guideService.js'
+import {
+  clearGuideProfileFeedback,
+  saveGuideProfile,
+  toggleGuideAvailability,
+} from './services/guideService.js'
 import { approveBookingRequest, rejectBookingRequest } from './services/approvalService.js'
 
 const appRoot = document.querySelector('#app')
@@ -145,6 +149,16 @@ appRoot.addEventListener('click', (event) => {
   if (guideAction === 'decline')
     respondToGuideAssignment(assignmentId, getCurrentUser()?.guideId, 'decline')
   if (guideAction) renderActiveView()
+
+  const profileAction = event.target.closest('[data-guide-profile-action]')?.dataset
+    .guideProfileAction
+  if (profileAction === 'cancel') clearGuideProfileFeedback()
+  if (profileAction === 'save') {
+    const form = appRoot.querySelector('#guide-profile-form')
+    const values = Object.fromEntries(new FormData(form))
+    saveGuideProfile(getCurrentUser()?.guideId, values)
+  }
+  if (profileAction) renderActiveView()
 
   const approvalAction = event.target.closest('[data-approval-action]')?.dataset.approvalAction
   const requestId = event.target.closest('[data-request-id]')?.dataset.requestId
