@@ -52,6 +52,11 @@ export const getGuideAssignments = (guideId) =>
       ['pending-guide-response', 'guide-confirmed'].includes(request.status),
   )
 
+export const getGuideSchedule = (guideId) =>
+  requests
+    .filter((request) => request.guideId === guideId && request.status === 'guide-confirmed')
+    .sort((first, second) => new Date(first.schedule) - new Date(second.schedule))
+
 export function respondToGuideAssignment(id, guideId, response) {
   requests = requests.map((request) => {
     if (request.id !== id || request.guideId !== guideId) return request

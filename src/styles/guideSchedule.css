@@ -1,0 +1,61 @@
+.guide-schedule-page {
+  max-width: 58rem;
+  margin: 0 auto;
+}
+.guide-schedule-page__heading,
+.guide-schedule__summary,
+.guide-schedule__footer {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+  justify-content: space-between;
+}
+.guide-schedule-page__heading {
+  margin-bottom: 1.5rem;
+}
+.guide-schedule__summary {
+  padding: 1.25rem;
+  border: 1px solid #dce2dd;
+  border-radius: 1rem;
+  background: #fff;
+}
+.guide-schedule__summary > div {
+  display: grid;
+  gap: 0.15rem;
+}
+.guide-schedule__summary strong {
+  color: var(--color-forest-950);
+  font-family: var(--font-display);
+  font-size: 2rem;
+  line-height: 1;
+}
+.guide-schedule__summary span,
+.guide-schedule__summary > p,
+.guide-schedule__footer > span {
+  color: var(--color-slate-600);
+}
+.guide-schedule__summary > p {
+  max-width: 28rem;
+  margin: 0;
+  line-height: 1.5;
+}
+.guide-schedule__list {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+.guide-schedule__list h2 {
+  margin: 0;
+  color: var(--color-forest-950);
+  font-size: 1.3rem;
+}
+.guide-schedule__footer {
+  align-items: center;
+}
+@media (max-width: 700px) {
+  .guide-schedule-page__heading,
+  .guide-schedule__summary,
+  .guide-schedule__footer {
+    flex-direction: column;
+  }
+}

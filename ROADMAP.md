@@ -135,6 +135,17 @@ This checklist converts the development plan in `README.md` into the project’s
 - [x] Centralize profile data in the Guide service for Dispatch reuse.
 - [x] Verify formatting, linting, and production build.
 
+## Milestone 5E — Guide Schedule
+
+**Goal:** give guides one clear view of their confirmed upcoming treks.
+
+- [x] Add a guide-only My Schedule route and sidebar entry.
+- [x] Show only assignments accepted by the signed-in guide.
+- [x] Display trek date, trail, lead hiker, group size, package, and confirmation status.
+- [x] Add an empty state and a centralized confirmed demo assignment.
+- [x] Keep assignment acceptance in My Assignments and schedule changes with the Tourism Office.
+- [x] Verify formatting, linting, and production build.
+
 ## Milestone 6 — Guide Dispatching
 
 **Goal:** demonstrate automated guide assignment.

@@ -1,5 +1,17 @@
 export const initialBookingRequests = [
   {
+    id: 'BK-2026-0808',
+    hiker: 'Miguel Torres',
+    trail: 'Mount Janagdan',
+    schedule: 'August 16, 2026',
+    packageName: 'Premium trek',
+    groupSize: 5,
+    status: 'guide-confirmed',
+    guideId: 'daniel',
+    guideName: 'Daniel Reyes',
+    submittedAt: 'August 7, 2026',
+  },
+  {
     id: 'BK-2026-0810',
     hiker: 'Lara Mendoza',
     trail: 'Alto Peak',

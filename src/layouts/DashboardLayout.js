@@ -16,6 +16,7 @@ const dashboardItems = [
     portals: ['guide'],
   },
   { label: 'My profile', href: '#/guide/profile', route: '/guide/profile', portals: ['guide'] },
+  { label: 'My schedule', href: '#/guide/schedule', route: '/guide/schedule', portals: ['guide'] },
   { label: 'Live tracking', href: '#/tracking', route: '/tracking', portals: ['guide', 'officer'] },
   {
     label: 'Weather',
