@@ -170,6 +170,18 @@ This checklist converts the development plan in `README.md` into the project’s
 - [x] Update landing-page trail calls to action.
 - [x] Verify formatting, linting, and production build.
 
+## Milestone 5H — Account Access Experience
+
+**Goal:** make account entry feel complete while keeping authentication safely simulated in the frontend prototype.
+
+- [x] Add Remember me controls for role selection and Tourist registration.
+- [x] Store remembered sessions locally and temporary sessions for the active browser session.
+- [x] Add a password-recovery route with validation and confirmation feedback.
+- [x] Add Tourist-only account registration with validation and success state.
+- [x] Keep Guide and Tourism Officer accounts issued through the Tourism Office.
+- [x] Link sign-in, password recovery, and registration screens.
+- [x] Verify formatting, linting, and production build.
+
 ## Milestone 6 — Guide Assignment Workflow
 
 **Goal:** demonstrate automated guide assignment.

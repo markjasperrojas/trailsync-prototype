@@ -1,5 +1,6 @@
 import { bookingSteps, packages, schedules, trails } from '../data/bookingData.js'
 import { createBookingRequest } from './approvalService.js'
+import { getCurrentUser } from './authService.js'
 
 const createInitialState = () => ({
   step: 0,
@@ -40,7 +41,7 @@ export function confirmBooking() {
   const schedule = schedules.find((item) => item.id === bookingState.scheduleId)
   const packageOption = packages.find((item) => item.id === bookingState.packageId)
   const request = createBookingRequest({
-    hiker: 'Maria Santos',
+    hiker: getCurrentUser()?.name ?? 'TrailSync tourist',
     trail: trail.name,
     schedule: schedule.date,
     packageName: packageOption.name,

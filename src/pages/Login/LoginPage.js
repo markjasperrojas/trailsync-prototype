@@ -31,11 +31,13 @@ export function LoginPage() {
           ${Input({ id: 'sign-in-email', label: 'Email address', type: 'email', placeholder: 'name@example.com', hint: 'Select a role to access its workspace.' })}
           ${Input({ id: 'sign-in-password', label: 'Password', type: 'password', placeholder: 'Enter your password' })}
           ${Button({ label: 'Sign in', attributes: 'disabled aria-disabled="true"' })}
+          <div class="login-page__form-actions"><label class="remember-choice"><input id="remember-me" type="checkbox" checked /> <span>Remember me</span></label><a href="#/forgot-password">Forgot password?</a></div>
         </div>
       </section>
       <section class="login-page__accounts" aria-labelledby="accounts-title">
         <div><p class="eyebrow">Role selection</p><h2 id="accounts-title">Choose your workspace.</h2></div>
         <div class="account-options">${Object.values(demoAccounts).map(AccountOption).join('')}</div>
+        <p class="login-page__signup">New to TrailSync? <a href="#/signup">Create a Tourist account</a></p>
       </section>
     </main>
   `

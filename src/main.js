@@ -1,7 +1,13 @@
 import './styles/global.css'
 import { App } from './App.js'
 import { startRouter } from './router/router.js'
-import { getCurrentUser, signInAs, signOut } from './services/authService.js'
+import {
+  getCurrentUser,
+  registerTourist,
+  requestPasswordReset,
+  signInAs,
+  signOut,
+} from './services/authService.js'
 import {
   canAdvanceBooking,
   changeBookingStep,
@@ -59,8 +65,14 @@ startRouter((currentPath) => {
 appRoot.addEventListener('click', (event) => {
   const signInButton = event.target.closest('[data-demo-role]')
   if (signInButton) {
-    const account = signInAs(signInButton.dataset.demoRole)
+    const remember = appRoot.querySelector('#remember-me')?.checked ?? true
+    const account = signInAs(signInButton.dataset.demoRole, remember)
     if (account) window.location.hash = `#${account.dashboardPath}`
+    return
+  }
+
+  if (event.target.closest('[data-auth-action="open-tourist-dashboard"]')) {
+    window.location.hash = '#/tourist'
     return
   }
 
@@ -165,4 +177,23 @@ appRoot.addEventListener('click', (event) => {
   if (approvalAction === 'approve') approveBookingRequest(requestId)
   if (approvalAction === 'reject') rejectBookingRequest(requestId)
   if (approvalAction) renderActiveView()
+})
+
+appRoot.addEventListener('submit', (event) => {
+  const form = event.target
+  if (!(form instanceof HTMLFormElement)) return
+
+  if (form.id === 'password-reset-form') {
+    event.preventDefault()
+    requestPasswordReset(new FormData(form).get('email'))
+    renderActiveView()
+  }
+
+  if (form.id === 'tourist-signup-form') {
+    event.preventDefault()
+    const values = Object.fromEntries(new FormData(form))
+    const remember = appRoot.querySelector('#signup-remember-me')?.checked ?? true
+    registerTourist(values, remember)
+    renderActiveView()
+  }
 })

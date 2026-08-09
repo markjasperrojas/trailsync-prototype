@@ -1,5 +1,6 @@
 export function Input({
   id,
+  name = id,
   label,
   type = 'text',
   placeholder = '',
@@ -14,7 +15,7 @@ export function Input({
   return `
     <label class="field" for="${id}">
       <span class="field__label">${label} ${requiredMark}</span>
-      <input class="field__input" id="${id}" name="${id}" type="${type}" placeholder="${placeholder}" value="${value}" ${describedBy} ${required ? 'required' : ''} ${readOnly ? 'readonly' : ''} />
+      <input class="field__input" id="${id}" name="${name}" type="${type}" placeholder="${placeholder}" value="${value}" ${describedBy} ${required ? 'required' : ''} ${readOnly ? 'readonly' : ''} />
       ${hint ? `<span class="field__hint" id="${id}-hint">${hint}</span>` : ''}
     </label>
   `

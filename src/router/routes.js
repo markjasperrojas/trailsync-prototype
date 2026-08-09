@@ -3,6 +3,7 @@ import { ApprovalsPage } from '../pages/Approvals/ApprovalsPage.js'
 import { BookingPage } from '../pages/Booking/BookingPage.js'
 import { CertificatePage } from '../pages/Certificate/CertificatePage.js'
 import { DispatchPage } from '../pages/Dispatch/DispatchPage.js'
+import { ForgotPasswordPage } from '../pages/ForgotPassword/ForgotPasswordPage.js'
 import { GuideAssignmentsPage } from '../pages/GuideAssignments/GuideAssignmentsPage.js'
 import { GuideProfilePage } from '../pages/GuideProfile/GuideProfilePage.js'
 import { GuideSchedulePage } from '../pages/GuideSchedule/GuideSchedulePage.js'
@@ -10,6 +11,7 @@ import { DashboardPage } from '../pages/Dashboard/DashboardPage.js'
 import { LandingPage } from '../pages/Landing/LandingPage.js'
 import { LoginPage } from '../pages/Login/LoginPage.js'
 import { SosPage } from '../pages/SOS/SosPage.js'
+import { SignUpPage } from '../pages/SignUp/SignUpPage.js'
 import { TrackingPage } from '../pages/Tracking/TrackingPage.js'
 import { TrailsPage } from '../pages/Trails/TrailsPage.js'
 import { WeatherPage } from '../pages/Weather/WeatherPage.js'
@@ -17,6 +19,8 @@ import { WeatherPage } from '../pages/Weather/WeatherPage.js'
 export const routes = {
   '/': { title: 'Explore TrailSync', page: LandingPage },
   '/login': { title: 'Sign in', page: LoginPage },
+  '/forgot-password': { title: 'Reset password', page: ForgotPasswordPage },
+  '/signup': { title: 'Create account', page: SignUpPage },
   '/trails': { title: 'Explore trails', page: TrailsPage },
   '/tourist': { title: 'Tourist dashboard', page: DashboardPage, allowedRoles: ['tourist'] },
   '/guide': { title: 'Guide dashboard', page: DashboardPage, allowedRoles: ['guide'] },
