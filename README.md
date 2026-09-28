@@ -1,5 +1,7 @@
 # TrailSync Prototype
 
+🔗 **Live Demo:** https://markjasperrojas.github.io/trailsync-prototype/
+
 ## Project Guide
 
 TrailSync is a frontend-only tourism-management prototype. It demonstrates the full visitor journey—from discovering a trail and booking a trek to live monitoring, emergency response, certificates, and tourism-office analytics. All dynamic content is local mock data; no backend or external API is required.
