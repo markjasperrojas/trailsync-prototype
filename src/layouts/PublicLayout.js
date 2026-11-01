@@ -8,7 +8,7 @@ export function PublicLayout({ content, currentPath }) {
         items: [
           { label: 'Home', href: '#/', active: currentPath === '/' },
           { label: 'Trails', href: '#/trails', active: currentPath === '/trails' },
-          { label: 'About', href: '#/weather', active: currentPath === '/weather' },
+          { label: 'About', href: '#/about', active: currentPath === '/about' },
           { label: 'Sign in', href: '#/login', active: currentPath === '/login' },
         ],
       })}

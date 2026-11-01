@@ -60,6 +60,11 @@ startRouter((currentPath) => {
   activePath = currentPath
   if (activePath !== '/tracking') stopTrackingTimer()
   renderActiveView()
+  if (currentPath === '/about') {
+    appRoot.querySelector('.landing-about')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  } else {
+    window.scrollTo(0, 0)
+  }
 })
 
 appRoot.addEventListener('click', (event) => {

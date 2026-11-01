@@ -22,6 +22,7 @@ export const routes = {
   '/forgot-password': { title: 'Reset password', page: ForgotPasswordPage },
   '/signup': { title: 'Create account', page: SignUpPage },
   '/trails': { title: 'Explore trails', page: TrailsPage },
+  '/about': { title: 'About TrailSync', page: LandingPage },
   '/tourist': { title: 'Tourist dashboard', page: DashboardPage, allowedRoles: ['tourist'] },
   '/guide': { title: 'Guide dashboard', page: DashboardPage, allowedRoles: ['guide'] },
   '/guide/assignments': {

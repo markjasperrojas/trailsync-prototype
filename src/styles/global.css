@@ -146,6 +146,8 @@ a {
   animation: page-enter 0.24s ease-out both;
 }
 .landing-page,
+.trails-page,
+.access-denied-page,
 .dashboard-layout .page-content {
   padding: clamp(1rem, 3vw, 2.25rem) 0;
 }
