@@ -1,83 +1,61 @@
-# TrailSync Prototype
+# 🏔️ TrailSync
 
-🔗 **Live Demo:** https://markjasperrojas.github.io/trailsync-prototype/
+A frontend prototype of a tourism-management platform for guided treks in Brgy. Cabintan, featuring Alto Peak, Sulfatara, and Mount Janagdan. It showcases role-based interfaces and interactive workflows for tourists, guides, and tourism officers using mock data without a backend.
 
-## Project Guide
+---
 
-TrailSync is a frontend-only tourism-management prototype. It demonstrates the full visitor journey—from discovering a trail and booking a trek to live monitoring, emergency response, certificates, and tourism-office analytics. All dynamic content is local mock data; no backend or external API is required.
+## 🛠️ Technologies
 
-### Run locally
+- JavaScript (ES6+)
+- Tailwind CSS
+- Vite
+- Leaflet.js
+- Chart.js
 
-1. Install a current Node.js LTS release (Node 20+ recommended).
-2. Install dependencies:
+---
 
-   ```bash
-   npm install
-   ```
+## ✨ Features
 
-3. Start the development server:
+- Role-based dashboards for Tourists, Guides, and Tourism Officers.
+- Trail discovery and booking with a multi-step booking workflow.
+- Booking management with approval, rejection, and guide assignment.
+- Live trek monitoring with interactive maps and simulated GPS tracking.
+- Weather forecasts, trail risk information, and SOS alerts for trekking safety.
+- Tourism analytics and digital certificates for reporting and trek completion.
 
-   ```bash
-   npm run dev
-   ```
+---
 
-4. Open the local URL Vite prints, normally `http://localhost:5173`.
+## 🧩 Process
 
-### Available commands
+I took on this client project to create a frontend prototype that demonstrates the proposed platform's design, user interface, and interactive workflows. I also saw it as an opportunity to apply what I learned from [The Odin Project](https://www.theodinproject.com/), particularly modern JavaScript (ES6+), while building with Vanilla JavaScript instead of a frontend framework. I also explored Claude as an AI coding assistant to experiment with AI-assisted development and learn how it can support my workflow.
 
-| Command | Purpose |
-| --- | --- |
-| `npm run dev` | Start the Vite development server. |
-| `npm run build` | Create a production build in `dist/`. |
-| `npm run preview` | Preview the production build locally. |
-| `npm run lint` | Check JavaScript with ESLint. |
-| `npm run lint:fix` | Automatically fix supported lint issues. |
-| `npm run format` | Format source files with Prettier. |
-| `npm run format:check` | Verify source-file formatting without changing files. |
+---
 
-### Demo sign-in accounts
+## 🚀 Running the Project
 
-Open `#/login` and select one of the one-click demo accounts. Passwords are intentionally not required in this prototype.
+### Prerequisites
 
-| Role | Demo user | Dashboard |
-| --- | --- | --- |
-| Tourist | Maria Santos | `#/tourist` |
-| Guide | Daniel Reyes | `#/guide` |
-| Tourism Officer | Ava Cruz | `#/admin` |
+- [Node.js](https://nodejs.org/) 20 or newer
+- npm
 
-### Prototype routes
+### Installation
 
-The application uses hash-based routing, so routes can be opened directly after the local URL.
+```bash
+# Clone the repository
+git clone https://github.com/markjasperrojas/trailsync-prototype.git
 
-| Route | Module |
-| --- | --- |
-| `#/` | Landing page |
-| `#/login` | Demo authentication |
-| `#/forgot-password` | Password recovery request |
-| `#/signup` | Tourist account registration |
-| `#/trails` | Public trail discovery |
-| `#/booking` | Tourist booking workflow |
-| `#/guides` | Tour guide management and assignment |
-| `#/tracking` | Live trekker monitoring and GPS simulation |
-| `#/weather` | Weather intelligence |
-| `#/sos` | Emergency-response simulation |
-| `#/certificate` | Digital certificate generation and download |
-| `#/analytics` | Tourism-office analytics dashboard |
+# Navigate to the project folder
+cd trailsync-prototype
 
-### Project architecture
+# Install dependencies
+npm install
 
-- `src/components/` contains reusable UI building blocks.
-- `src/layouts/` contains public and role-based dashboard shells.
-- `src/pages/` contains route-level screen rendering.
-- `src/services/` owns interactive prototype state and actions.
-- `src/data/` contains centralized mock data.
-- `src/modules/` contains integration-specific code, including Leaflet maps and Chart.js charts.
-- `src/router/` defines application routes and hash navigation.
-- `src/styles/` contains global design tokens and responsive styling.
+# Start the development server
+npm run dev
+```
 
-### Prototype notes
+Open **http://localhost:5173** in your browser.
 
-- Authentication is simulated with browser local storage.
-- Booking, guide management, tracking, weather, SOS, certificates, and analytics use mock data only.
-- The tracking map uses OpenStreetMap tiles; an internet connection improves map-tile loading during local use.
-- The downloaded certificate is an HTML file so it can be opened or printed as a record of completion.
+---
+
+## 🎬 Preview
