@@ -27,7 +27,7 @@ A frontend prototype of a tourism-management platform for guided treks in Brgy. 
 
 ## 🧩 Process
 
-I took on this client project to create a frontend prototype that demonstrates the proposed platform's design, user interface, and interactive workflows. I also saw it as an opportunity to apply what I learned from [The Odin Project](https://www.theodinproject.com/), particularly modern JavaScript (ES6+), while building with Vanilla JavaScript instead of a frontend framework. I also explored Codex and Claude as an AI coding assistant to experiment with AI-assisted development and learn how it can support my workflow.
+I independently developed this frontend prototype as a personal project to explore the design, user interface, and interactive workflows of a trail-management platform. After completing it, I presented it to the client to give them a visual and interactive reference for the proposed platform. I used the project to apply what I learned from [The Odin Project](https://www.theodinproject.com/), particularly modern JavaScript (ES6+), while building with Vanilla JavaScript. I also explored Codex and Claude as an AI coding assistant to experiment with AI-assisted development and learn how it can support my workflow.
 
 ---
 
